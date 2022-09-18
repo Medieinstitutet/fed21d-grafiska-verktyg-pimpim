@@ -2,7 +2,7 @@ Endast en vy på popup-fönster då den ska se rätt likadan ut på alla tre pla
 Innan man börjat skriva in email ska "Yes, pls"-knappen vara diabled, och ha bakgrundsfärgen #686D6A.
 
 De bilderna på produkterna (under texten "read more about the products" är kortobjekten. Den ska innehålla samtliga produkter och dess namn under, 
-och man ska kunna scrolla för att se produkterna. Tanken är att bilderna ska förstoras litegrann när man hoverar över. Missat att lägga till pil på sidan, kanske kan vara bra att få till för att göra funktionen tydlig? :)
+och man ska kunna scrolla för att se produkterna. Tanken är att bilderna ska förstoras litegrann när man hoverar över. 
 
 När man hoverar på menyobjekten så ska targetobjektet få en underline. Hover på länktext och knappar ska förstora litegrann.
 
