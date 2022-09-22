@@ -1,3 +1,4 @@
+
 <script setup lang="ts">
   import LogoPrimary from './icons/LogoPrimary.vue';
   import IconBurger from './icons/IconBurger.vue';
@@ -6,13 +7,13 @@
 </script>
 
 <script lang="ts">
-  export default{
-    data(){
-      return {
-        menuOpen: false
+    export default {
+      data(){
+        return{
+          menuOpen: false
+        }
       }
     }
-  }
 </script>
 
 <template>
@@ -31,7 +32,6 @@
   .wrapper{
     display:flex;
     justify-content: space-between;
-    padding: 2rem;
 
     #logoPrimary{
       z-index: 999;

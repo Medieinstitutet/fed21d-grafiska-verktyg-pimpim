@@ -1,30 +1,32 @@
 <script setup lang="ts">
-  import IconArrow from './icons/IconArrow.vue'
+import IconArrow from './icons/IconArrow.vue'
   defineProps<{
     text: string
   }>()
   </script>
   
   <template>
-    <button>{{ text }} <IconArrow/></button>
+    <button>{{ text }} <IconArrow class="iconArrow" /></button>
   </template>
   
   <style scoped lang="scss">
     button {
       display:flex;
       align-items: center;
-      cursor: pointer;
-      font-style:bold;
-      font-size: 0.9rem;
+      font-size: 1.1rem;
+      font-weight: 600;
       color: #F5D90A;
       background-color: #151718;
       border: 1px solid #3A3F42;
       border-radius: 99px;
+      width:fit-content;
+      padding: 10px 24px;
 
-      &:hover{
-        background-color:blue;
+      .iconArrow{
+        margin-left: 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
       }
     }
-
   </style>
   

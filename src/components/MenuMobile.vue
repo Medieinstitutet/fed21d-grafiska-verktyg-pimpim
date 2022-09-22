@@ -33,14 +33,15 @@
     border: 1px solid #3A3F42;
     border-radius: 8px;
     position:absolute;
-    top: 0;
+    top: 5px;
+    left:5px;
     width:98%;
     text-align: right;
     padding:4rem 2rem 1rem;
     display:flex;
     flex-direction: column;
     row-gap: 1.5rem;
-    margin:5px;
+    z-index: 996;
 
     ul{
       display: flex;
@@ -88,8 +89,5 @@
       }
     }
   }
-
-  
-  
 </style>
 

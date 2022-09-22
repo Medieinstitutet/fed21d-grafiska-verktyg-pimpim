@@ -1,0 +1,75 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: white;
+  background: #151718;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body #logoPrimary {
+  width: 8rem;
+  height: 2rem;
+}
+
+body #iconBurger {
+  height: 2.1rem;
+  width: 2.1rem;
+}
+
+body p {
+  color: #ECEDEE;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+#app {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  padding: 3rem 2rem;
+}
+
+@supports (font-variation-settings: "wght" 500) {
+  #app {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.yellow {
+  color: #F5D90A;
+}
+
+.date {
+  color: #9BA1A6;
+  font-size: 1.1rem;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+}
+/*# sourceMappingURL=style.css.map */
