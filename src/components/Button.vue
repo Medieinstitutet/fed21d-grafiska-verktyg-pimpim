@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import IconArrow from './icons/IconArrow.vue'
   defineProps<{
     text: string
   }>()
   </script>
   
   <template>
-    <button>{{ text }} <IconArrow class="iconArrow" /></button>
+    <button>{{ text }} <img src="./icons/IconArrow.svg" class="iconArrow" alt="arrow icon" /></button>
   </template>
   
   <style scoped lang="scss">
