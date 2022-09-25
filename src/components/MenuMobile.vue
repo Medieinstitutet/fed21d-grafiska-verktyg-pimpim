@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import IconMagnifier from './icons/IconMagnifier.vue'
 </script>
 
 <template>
@@ -21,7 +20,7 @@
     </div>
 
     <div class="wrap">
-      <IconMagnifier class="iconMagnifier" />
+      <img src="./icons/IconMagnifier.svg" class="iconMagnifier" alt="magnifier icon"/>
       <input type="text" placeholder="Sök"/>
     </div>
   </nav>

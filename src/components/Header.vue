@@ -1,6 +1,5 @@
 
 <script setup lang="ts">
-  import LogoPrimary from './icons/LogoPrimary.vue';
   import IconBurger from './icons/IconBurger.vue';
   import IconCross from './icons/IconCross.vue'
   import MenuMobile from './MenuMobile.vue';
@@ -18,7 +17,7 @@
 
 <template>
   <div class="wrapper">
-    <LogoPrimary id="logoPrimary" />
+    <img src="./icons/LogoPrimary.svg" alt="company logo" id="logoPrimary"/>
     <button @click="menuOpen = !menuOpen">
       <IconBurger id="iconBurger" v-if="!menuOpen" />
       <IconCross id="iconCross" v-if="menuOpen"/>
