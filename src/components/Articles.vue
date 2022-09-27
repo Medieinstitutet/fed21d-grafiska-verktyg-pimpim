@@ -32,7 +32,7 @@
 </template>
 
 <style lang="scss">
-  section{
+  #section-news{
     display:flex;
     flex-direction: column;
     gap:5rem;

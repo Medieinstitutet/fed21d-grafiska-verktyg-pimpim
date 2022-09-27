@@ -34,7 +34,14 @@ body {
 
   #app{
     font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  header{
     padding: 3rem 2rem;
+  }
+
+  main, section {
+    padding: 3rem 2rem 5rem;
   }
   
   @supports(font-variation-settings: "wght" 500){
