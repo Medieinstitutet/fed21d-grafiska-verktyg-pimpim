@@ -32,38 +32,42 @@ body p {
   line-height: 1.4;
 }
 
-#app {
+body #app {
   font-family: 'Plus Jakarta Sans', sans-serif;
   padding: 3rem 2rem;
 }
 
 @supports (font-variation-settings: "wght" 500) {
-  #app {
+  body #app {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
   }
 }
 
-button {
+body button {
   cursor: pointer;
   border: none;
   background: transparent;
 }
 
-ul {
+body ul {
   list-style-type: none;
 }
 
-a {
+body a {
   text-decoration: none;
   font-size: 0.9rem;
 }
 
-.yellow {
+body .yellow {
   color: #F5D90A;
 }
 
-.date {
+body h2, body h3 {
+  color: #F5D90A;
+}
+
+body .date {
   color: #9BA1A6;
   font-size: 1.1rem;
 }

@@ -1,3 +1,5 @@
+$yellow: #F5D90A;
+
 *{
   box-sizing:border-box;
 }
@@ -29,40 +31,46 @@ body {
     font-weight: 400;
     line-height: 1.4;
   }
-}
 
-#app{
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  padding: 3rem 2rem;
-}
-
-@supports(font-variation-settings: "wght" 500){
-  #app {
+  #app{
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 500;
+    padding: 3rem 2rem;
   }
+  
+  @supports(font-variation-settings: "wght" 500){
+    #app {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 500;
+    }
+  }
+  
+  button{
+    cursor: pointer;
+    border:none;
+    background:transparent;
+  }
+  
+  ul{
+    list-style-type: none;
+  }
+  
+  a{
+    text-decoration:none;
+    font-size: 0.9rem;
+  }
+  
+  .yellow{
+    color: #F5D90A;
+  }
+  
+  h2, h3{
+    color: $yellow;
+  }
+  
+  .date{
+    color: #9BA1A6;
+    font-size: 1.1rem;
+  }
+  
 }
 
-button{
-  cursor: pointer;
-  border:none;
-  background:transparent;
-}
-
-ul{
-  list-style-type: none;
-}
-
-a{
-  text-decoration:none;
-  font-size: 0.9rem;
-}
-
-.yellow{
-  color: #F5D90A;
-}
-
-.date{
-  color: #9BA1A6;
-  font-size: 1.1rem;
-}

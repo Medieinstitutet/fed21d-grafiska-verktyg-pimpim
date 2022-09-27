@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import Header from './components/Header.vue'
   import Main from './components/Main.vue'
+  import Articles from './components/Articles.vue'
 </script>
 
 <template>
@@ -13,6 +14,10 @@
     <img src="./assets/hero.jpg" alt="city of stockholm"/>
   </main>
 
+  <section>
+    <Articles />
+  </section>
+  
 </template>
 
 <style scoped>
