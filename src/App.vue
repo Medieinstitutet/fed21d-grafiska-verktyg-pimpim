@@ -1,42 +1,66 @@
 <script setup lang="ts">
   import Header from './components/Header.vue'
-  import Main from './components/Main.vue'
+  import Intro from './components/Intro.vue'
   import Articles from './components/Articles.vue'
-import Info from './components/Info.vue'
+  import Info from './components/Info.vue'
+  import Statistics from './components/Statistics.vue'
 </script>
 
 <template>
-  <header>
+  <header id="header-app">
       <Header/>
   </header>
 
   <main>
-    <Main />
-    <img src="./assets/hero.jpg" alt="city of stockholm"/>
-  </main>
-
-  <section id="section-news">
-    <Articles />
-  </section>
-
-  <section id="section-info">
-    <Info />
-  </section>
+    <section id="section-intro">
+      <Intro />
+      <img src="./assets/hero.jpg" alt="city of stockholm" id="img-intro"/>
+    </section>
   
+    <section id="section-news">
+      <Articles />
+    </section>
+
+    <section id="section-info">
+      <Info />
+    </section>
+
+    <section id="section-statistics">
+      <h2>Stokab i siffror</h2>
+      <Statistics numbers="2 556" object="Nya förbindelser"/>
+      <Statistics numbers="1,9 mn" object="Kilometer fiberoptik"/>
+      <Statistics numbers="23 200" object="Anslutningspunkter"/>
+    </section>
+  </main>
 </template>
 
-<style scoped>
-  img{
-    width:100vw;
-    position: relative;
-    left:-2rem;
-    margin-top: 40px;
-  }
-
-  main{
+<style scoped lang="scss">
+  #section-intro{
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
-    margin: 4rem 0 3rem;
+
+    #img-intro{
+      width:100vw;
+      position: relative;
+      left:-2rem;
+      margin-top: 40px;
+    }
+  }
+
+  #section-statistics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 9rem;
+    row-gap: 4rem;
+
+    h2{
+      width: 100%;
+      color: #ECEDEE;
+      font-size: 1.8rem;
+      text-align: center;
+      margin: 0;
+    }
   }
 </style>

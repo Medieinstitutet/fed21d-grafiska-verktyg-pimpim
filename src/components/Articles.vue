@@ -60,11 +60,12 @@
         font-size: 1.1rem;
       }
 
-      .cardHeading{
+      header{
         display: grid;
         grid-template-rows: 1fr auto;
         grid-template-columns: 1fr 1fr 1fr;
         text-align: left;
+        padding: 0;
 
         img{
           grid-column: 1;
@@ -79,6 +80,7 @@
           margin:0;
           padding: 0 1rem;
         }
+
         span{
           grid-column: 2/span 2;
           font-weight: 400;

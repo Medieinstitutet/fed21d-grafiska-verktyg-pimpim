@@ -10,11 +10,11 @@ import Button from "./Button.vue";
 
 <template>
   <article class="item">
-    <div class="cardHeading">
+    <header class="cardHeading">
       <slot></slot>
       <h3>{{ heading }}</h3>
       <span>Publicerad {{ date }}</span>
-    </div>
+    </header>
     <p>{{ text }}</p>
     <Button>{{ buttonText }}</Button>
   </article>
