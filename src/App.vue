@@ -27,7 +27,9 @@
 
     <section id="section-statistics">
       <h2>Stokab i siffror</h2>
-      <Statistics numbers="2556" object="Nya förbindelser"/>
+      <Statistics numbers="2 556" object="Nya förbindelser"/>
+      <Statistics numbers="1,9 mn" object="Kilometer fiberoptik"/>
+      <Statistics numbers="23 200" object="Anslutningspunkter"/>
     </section>
   </main>
 </template>
@@ -43,6 +45,22 @@
       position: relative;
       left:-2rem;
       margin-top: 40px;
+    }
+  }
+
+  #section-statistics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 9rem;
+    row-gap: 4rem;
+
+    h2{
+      width: 100%;
+      color: #ECEDEE;
+      font-size: 1.8rem;
+      text-align: center;
+      margin: 0;
     }
   }
 </style>

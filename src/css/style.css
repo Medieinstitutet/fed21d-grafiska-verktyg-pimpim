@@ -41,7 +41,7 @@ body #app #header-app {
 }
 
 body #app section {
-  padding: 0 2rem;
+  padding: 2.5rem 2rem 4rem;
 }
 
 @supports (font-variation-settings: "wght" 500) {
