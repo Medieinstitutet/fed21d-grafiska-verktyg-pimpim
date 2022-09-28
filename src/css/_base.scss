@@ -34,16 +34,20 @@ body {
 
   #app{
     font-family: 'Plus Jakarta Sans', sans-serif;
+    
+    #header-app{
+      padding: 3rem 2rem 0;
+    }
+
+    section{
+      padding:0 2rem;
+    }
   }
 
-  header{
-    padding: 3rem 2rem;
-  }
-
-  main, section {
-    padding: 3rem 2rem 5rem;
-  }
+ 
   
+
+
   @supports(font-variation-settings: "wght" 500){
     #app {
       font-family: 'Plus Jakarta Sans', sans-serif;
