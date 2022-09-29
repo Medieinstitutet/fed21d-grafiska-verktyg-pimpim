@@ -4,6 +4,7 @@
   import Articles from './components/Articles.vue'
   import Info from './components/Info.vue'
   import Statistics from './components/Statistics.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
@@ -32,6 +33,9 @@
       <Statistics numbers="23 200" object="Anslutningspunkter"/>
     </section>
   </main>
+  <footer>
+    <Footer />
+  </footer>
 </template>
 
 <style scoped lang="scss">
@@ -63,4 +67,5 @@
       margin: 0;
     }
   }
+
 </style>

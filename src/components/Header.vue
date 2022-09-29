@@ -3,6 +3,7 @@
   import IconBurger from './icons/IconBurger.vue';
   import IconCross from './icons/IconCross.vue'
   import MenuMobile from './MenuMobile.vue';
+  import IconLogo from './icons/IconLogo.vue';
 </script>
 
 <script lang="ts">
@@ -17,7 +18,7 @@
 
 <template>
   <div class="wrapper">
-    <img src="./icons/LogoPrimary.svg" alt="company logo" id="logoPrimary"/>
+    <IconLogo id="header-logo" />
     <button @click="menuOpen = !menuOpen">
       <IconBurger id="iconBurger" v-if="!menuOpen" />
       <IconCross id="iconCross" v-if="menuOpen"/>
@@ -32,12 +33,14 @@
     display:flex;
     justify-content: space-between;
 
-    #logoPrimary{
+    #header-logo{
       z-index: 999;
     }
 
     #iconCross{
       z-index: 999;
+      width:1.5rem;
+      height:1.5rem;
       place-self: end;
       position:relative;
       cursor:pointer;

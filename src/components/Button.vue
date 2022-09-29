@@ -3,14 +3,14 @@ import IconArrow from "./icons/IconArrow.vue";
   </script>
   
   <template>
-    <button>
+    <a href="#" class="link-button">
       <slot></slot> 
       <icon-arrow class="iconArrow"/>
-    </button>
+    </a>
   </template>
   
   <style scoped lang="scss">
-    button {
+    .link-button {
       display:flex;
       align-items: center;
       font-size: 1.1rem;
