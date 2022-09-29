@@ -81,7 +81,7 @@
           padding: 0 1rem;
         }
 
-        span{
+        .date{
           grid-column: 2/span 2;
           font-weight: 400;
           color: #9BA1A6;
@@ -91,7 +91,7 @@
         }
       }
 
-      button{
+      .link-button{
         place-self: center;
         position: relative;
         bottom: -1.5rem;

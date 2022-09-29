@@ -50,7 +50,7 @@ import Button from "./Button.vue";
         line-height: 1.6;
       }
 
-      button{
+      .link-button{
         margin-top: 0.5rem;
       }
     }    

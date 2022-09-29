@@ -13,7 +13,7 @@ import Button from "./Button.vue";
     <header class="cardHeading">
       <slot></slot>
       <h3>{{ heading }}</h3>
-      <span>Publicerad {{ date }}</span>
+      <p class="date">Publicerad {{ date }}</p>
     </header>
     <p>{{ text }}</p>
     <Button>{{ buttonText }}</Button>
