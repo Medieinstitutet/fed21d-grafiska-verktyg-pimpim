@@ -5,6 +5,7 @@
   import Info from './components/Info.vue'
   import Statistics from './components/Statistics.vue'
 import Footer from './components/Footer.vue'
+import Cookies from './components/Cookies.vue'
 </script>
 
 <template>
@@ -36,6 +37,8 @@ import Footer from './components/Footer.vue'
   <footer>
     <Footer />
   </footer>
+
+  <Cookies />
 </template>
 
 <style scoped lang="scss">
