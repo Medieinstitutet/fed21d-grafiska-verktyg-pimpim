@@ -2,7 +2,7 @@
 <script setup lang="ts">
   import IconBurger from './icons/IconBurger.vue';
   import IconCross from './icons/IconCross.vue'
-  import MenuMobile from './MenuMobile.vue';
+  import Menu from './Menu.vue';
   import IconLogo from './icons/IconLogo.vue';
 </script>
 
@@ -10,40 +10,36 @@
     export default {
       data(){
         return{
-          menuOpen: false
+          menuOpen: false,
+          screenWidth: document.documentElement.clientWidth
+        }
+      },
+      mounted(){
+        window.addEventListener('resize', this.getWidth)
+      },
+
+      methods: {
+        getWidth(){
+          this.screenWidth = document.documentElement.clientWidth
         }
       }
     }
+    
 </script>
 
 <template>
-  <div class="wrapper">
-    <IconLogo id="header-logo" />
-    <button @click="menuOpen = !menuOpen">
+  <IconLogo id="header-logo" />
+  <div class="menu-mobile" >
+    <button @click="menuOpen = !menuOpen" v-if="screenWidth <= 768">
       <IconBurger id="iconBurger" v-if="!menuOpen" />
       <IconCross id="iconCross" v-if="menuOpen"/>
     </button>
+    <Menu v-if="menuOpen" />
   </div>
 
-  <MenuMobile v-if="menuOpen" />
+  <Menu v-if="screenWidth > 768" />
 </template>
 
 <style scoped lang="scss">
-  .wrapper{
-    display:flex;
-    justify-content: space-between;
-
-    #header-logo{
-      z-index: 999;
-    }
-
-    #iconCross{
-      z-index: 999;
-      width:1.5rem;
-      height:1.5rem;
-      place-self: end;
-      position:relative;
-      cursor:pointer;
-    }
-  }
+  
 </style>

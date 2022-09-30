@@ -31,34 +31,35 @@
     width: 98.5%;
     position: fixed;
     bottom:2px;
-    left: 3.5px;
-    padding: 2rem;
+    margin-left: 3.5px;
+    padding: 24px;
     display: flex;
     flex-wrap: wrap;
     row-gap: 24px;
     justify-content: space-evenly;
 
     b{
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       width:100%;
     }
 
     p{
-      font-size: 1.1rem;
+      font-size: 0.9rem;
+      line-height: 22px;
     }
 
     a{
       color: #3399FF;
       text-decoration: underline #214B74 2px;
-      font-size: 1.1rem;
+      font-size: 0.9rem;
       font-weight: 500;
     }
 
     button{
       border-radius: 99px;
-      padding: 10px 30px;
+      padding: 10px 20px;
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 0.9rem;
 
       &:first-of-type{
         background-color: #F5D90A;

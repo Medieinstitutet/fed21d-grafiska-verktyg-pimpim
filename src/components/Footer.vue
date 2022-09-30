@@ -61,7 +61,7 @@ import IconLogo from "./icons/IconLogo.vue";
     <li><span>Box 711, 120 02 Årsta</span></li>
     <li>Org.nr: <span>556475-6467</span></li>
     <li>Besöksadress: <span>Pastellvägen 6, Johanneshov</span></li>
-    <Button>Hitta hit</Button>
+    <li><Button>Hitta hit</Button></li>
   </ul>
 
   <div>
@@ -71,36 +71,5 @@ import IconLogo from "./icons/IconLogo.vue";
 </template>
 
 <style lang="scss">
-  #footer-contact{
-    padding: 0 1.3rem;
-    display: flex;
-    flex-wrap:wrap;
-    flex-grow: 2;
-    row-gap: 14px;
-    justify-content: center;
-
-    li{
-      font-size: 1.1rem;
-      vertical-align: middle;
-
-      span{
-        font-weight: 300;
-      }
-
-      &:last-child{
-        flex-basis: content;
-      }
-
-      &:nth-child(even)::before{
-        content: "";
-        margin: 0 1rem;
-        background: #3A3F42;
-        display: inline-block;
-        width: 2.5px;
-        height: 25px;
-        rotate: 22deg;
-        vertical-align: text-top;
-      }
-    }
-  }
+  
 </style>
