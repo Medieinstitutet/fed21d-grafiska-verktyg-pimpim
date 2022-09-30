@@ -4,8 +4,23 @@
   import Articles from './components/Articles.vue'
   import Info from './components/Info.vue'
   import Statistics from './components/Statistics.vue'
-import Footer from './components/Footer.vue'
-import Cookies from './components/Cookies.vue'
+  import Footer from './components/Footer.vue'
+  import Cookies from './components/Cookies.vue'
+</script>
+
+<script lang="ts">
+  export default {
+    data(){
+      return{
+        cookiesOpen: true
+      }
+    },
+    methods: {
+      acceptCookies(){
+        this.cookiesOpen = false
+      }
+    }
+  }
 </script>
 
 <template>
@@ -38,7 +53,7 @@ import Cookies from './components/Cookies.vue'
     <Footer />
   </footer>
 
-  <Cookies />
+  <Cookies v-if=cookiesOpen v-on:accept-cookies="acceptCookies" />
 </template>
 
 <style scoped lang="scss">
