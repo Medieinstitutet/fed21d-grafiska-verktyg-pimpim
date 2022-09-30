@@ -1,0 +1,143 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: white;
+  background: #151718;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body #iconBurger {
+  height: 2rem;
+  width: 2rem;
+}
+
+body p {
+  color: #ECEDEE;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+body #app {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body #app #header-app {
+  padding: 1.7rem 2rem 0;
+}
+
+body #app section {
+  padding: 2.5rem 2rem 4rem;
+}
+
+@supports (font-variation-settings: "wght" 500) {
+  body #app {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+body button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+body ul {
+  list-style-type: none;
+}
+
+body a {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+body .yellow {
+  color: #F5D90A;
+}
+
+body h2, body h3 {
+  color: #F5D90A;
+}
+
+body .date {
+  color: #9BA1A6;
+  font-size: 1.1rem;
+}
+
+body footer {
+  padding: 4.5rem 0 4rem;
+  background-color: #1A1D1E;
+  border-top: 1px solid #3A3F42;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 2rem;
+}
+
+body footer #footer-linkList {
+  margin: 0;
+  width: 100%;
+}
+
+body footer #footer-linkList:first-of-type {
+  padding: 0 2rem;
+}
+
+body footer #footer-linkList .footer-linkGroup:last-of-type .footer-links {
+  padding-bottom: 0;
+}
+
+body footer #footer-linkList .footer-linkGroup {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #ECEDEE;
+}
+
+body footer #footer-linkList .footer-linkGroup .footer-links {
+  padding: 1rem 0 2rem;
+}
+
+body footer #footer-linkList .footer-linkGroup .footer-links a {
+  color: #ECEDEE;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 2.2;
+}
+
+body footer #footer-linkList .footer-linkGroup .footer-links a img {
+  vertical-align: text-bottom;
+}
+
+body footer div {
+  text-align: center;
+}
+
+body footer div #footer-logo {
+  background-color: #F5D90A;
+  color: #151718;
+  width: 12rem;
+  height: 3.5rem;
+  padding: 1rem 1rem;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+}
+/*# sourceMappingURL=style.css.map */
