@@ -1,5 +1,57 @@
 body{
   #app{
+    #header-app{
+      padding: 71px 40px 0;
+      column-gap: 25px;
+
+      nav{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 25px;
+        position: relative;
+        top: -48px;
+    
+        #nav-primary{
+          column-gap: 20px;
+          order: 2;
+          margin: 0;
+        }
+    
+        #nav-secondary{
+          justify-content: end;
+          column-gap: 24px;
+          order: 1;
+          width: 100%;
+
+          li:not(:last-child)::after{
+            @include afterSlash();
+            margin-left: 24px;
+          }
+        }
+
+        .nav-inputWrapper{
+          order:3;
+          
+          input{
+            font-size: 1rem;
+
+            &::placeholder{
+              font-size: 1rem;
+            }
+          }
+          
+        }
+    
+        ul{
+          padding: 0;
+          margin:0;
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+    }
     section{
       padding:2.5rem 32px 4rem;
     }
@@ -28,11 +80,11 @@ body{
       column-gap: 48px;
       
       div{
-        width:45%;
+        width:47%;
       }
 
       article{
-        width: 45%;
+        width:47%;
         row-gap: 16px;
         padding: 20px 20px 0;
 
@@ -69,6 +121,15 @@ body{
           }
         }
       }
+    }
+
+    #cookies{
+      position: fixed;
+      width: 50%;
+      right: 3.5px;
+      justify-content: start;
+      column-gap: 8px;
+      padding: 32px;
     }
   }
 }

@@ -2,7 +2,7 @@
 <script setup lang="ts">
   import IconBurger from './icons/IconBurger.vue';
   import IconCross from './icons/IconCross.vue'
-  import MenuMobile from './MenuMobile.vue';
+  import Menu from './Menu.vue';
   import IconLogo from './icons/IconLogo.vue';
 </script>
 
@@ -28,15 +28,16 @@
 </script>
 
 <template>
-  <div class="wrapper" v-if="screenWidth <= 900" >
-    <IconLogo id="header-logo" />
-    <button @click="menuOpen = !menuOpen">
+  <IconLogo id="header-logo" />
+  <div class="menu-mobile" >
+    <button @click="menuOpen = !menuOpen" v-if="screenWidth <= 768">
       <IconBurger id="iconBurger" v-if="!menuOpen" />
       <IconCross id="iconCross" v-if="menuOpen"/>
     </button>
+    <Menu v-if="menuOpen" />
   </div>
 
-  <MenuMobile v-if="menuOpen" />
+  <Menu v-if="screenWidth > 768" />
 </template>
 
 <style scoped lang="scss">

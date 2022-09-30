@@ -31,7 +31,7 @@
     width: 98.5%;
     position: fixed;
     bottom:2px;
-    left: 3.5px;
+    margin-left: 3.5px;
     padding: 24px;
     display: flex;
     flex-wrap: wrap;
@@ -45,6 +45,7 @@
 
     p{
       font-size: 0.9rem;
+      line-height: 22px;
     }
 
     a{
