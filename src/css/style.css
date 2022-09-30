@@ -14,17 +14,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body #iconBurger {
-  height: 2rem;
-  width: 2rem;
-}
-
 body p {
   color: #ECEDEE;
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.4;
+}
+
+@supports (font-variation-settings: "wght" 500) {
+  body #app {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
 }
 
 body #app {
@@ -35,14 +36,222 @@ body #app #header-app {
   padding: 1.7rem 2rem 0;
 }
 
-body #app section {
-  padding: 2.5rem 2rem 4rem;
+body #app #header-app .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-@supports (font-variation-settings: "wght" 500) {
-  body #app {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-  }
+body #app #header-app .wrapper #header-logo {
+  z-index: 999;
+}
+
+body #app #header-app .wrapper #iconBurger {
+  height: 1.1rem;
+  width: 1.3rem;
+}
+
+body #app #header-app .wrapper #iconCross {
+  z-index: 999;
+  width: 1.5rem;
+  height: 1.5rem;
+  place-self: end;
+  position: relative;
+  cursor: pointer;
+}
+
+body #app section {
+  padding: 2.5rem 24px 3rem;
+}
+
+body #app #section-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.4rem;
+  overflow: visible;
+  padding-bottom: 0;
+}
+
+body #app #section-intro div h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+body #app #section-intro div p {
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+body #app #section-intro div p:first-of-type {
+  font-size: 14px;
+}
+
+body #app #section-intro #img-intro {
+  width: 100vw;
+  margin-top: 40px;
+  left: -24px;
+  position: relative;
+}
+
+body #app #section-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 42px 48px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #app #section-news div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+body #app #section-news div h2 {
+  font-size: 1.25rem;
+}
+
+body #app #section-news div p {
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0 2rem;
+}
+
+body #app #section-news article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #3A3F42;
+  border-radius: 1rem;
+  background-color: #1A1D1E;
+  padding: 16px 14px 0;
+}
+
+body #app #section-news article .cardHeading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  padding: 0;
+}
+
+body #app #section-news article .cardHeading img {
+  width: 128px;
+  height: 128px;
+}
+
+body #app #section-news article .cardHeading div {
+  text-align: left;
+  width: auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+body #app #section-news article .cardHeading div h3 {
+  line-height: 1.5;
+  margin: 0;
+}
+
+body #app #section-news article .cardHeading div .date {
+  font-weight: 400;
+  color: #9BA1A6;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  padding: 0;
+}
+
+body #app #section-news article p:not(.date) {
+  margin-top: 1rem;
+}
+
+body #app #section-news article .link-button {
+  place-self: center;
+  position: relative;
+  bottom: -1.2rem;
+}
+
+body #app #section-info {
+  background-color: #1A1D1E;
+  border-top: 1px solid #3A3F42;
+  border-bottom: 1px solid #3A3F42;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 5rem;
+}
+
+body #app #section-info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.9rem;
+}
+
+body #app #section-info div h2 {
+  margin: 0;
+}
+
+body #app #section-info div p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+body #app #section-info div .link-button {
+  margin-top: 0.5rem;
+}
+
+body #app #section-statistics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 4rem;
+}
+
+body #app #section-statistics h2 {
+  width: 100%;
+  color: #ECEDEE;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 0;
 }
 
 body button {
@@ -70,11 +279,11 @@ body h2, body h3 {
 
 body .date {
   color: #9BA1A6;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 body footer {
-  padding: 4.5rem 0 4rem;
+  padding: 64px 0 48px;
   background-color: #1A1D1E;
   border-top: 1px solid #3A3F42;
   display: -webkit-box;
@@ -93,6 +302,14 @@ body footer {
 body footer #footer-linkList {
   margin: 0;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 body footer #footer-linkList:first-of-type {
@@ -105,8 +322,9 @@ body footer #footer-linkList .footer-linkGroup:last-of-type .footer-links {
 
 body footer #footer-linkList .footer-linkGroup {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #ECEDEE;
+  width: 100%;
 }
 
 body footer #footer-linkList .footer-linkGroup .footer-links {
@@ -115,7 +333,7 @@ body footer #footer-linkList .footer-linkGroup .footer-links {
 
 body footer #footer-linkList .footer-linkGroup .footer-links a {
   color: #ECEDEE;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 300;
   line-height: 2.2;
 }
@@ -133,11 +351,143 @@ body footer div #footer-logo {
   color: #151718;
   width: 12rem;
   height: 3.5rem;
-  padding: 1rem 1rem;
+  padding: 12px 24px;
+  margin-bottom: 4px;
+}
+
+body footer #footer-contact {
+  padding: 0 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  row-gap: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer #footer-contact li {
+  font-size: 0.85rem;
+  font-weight: 700;
+  vertical-align: middle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer #footer-contact li span {
+  font-weight: 300;
+}
+
+body footer #footer-contact li:last-child {
+  -ms-flex-preferred-size: content;
+      flex-basis: content;
+}
+
+body footer #footer-contact li:not(:last-child):nth-child(even)::before {
+  content: "";
+  margin: 0 8px;
+  background: #3A3F42;
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  rotate: 22deg;
+  vertical-align: middle;
 }
 
 @font-face {
   font-family: "Plus Jakarta Sans";
   src: url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+}
+
+@media screen and (min-width: 768px) {
+  body #app section {
+    padding: 2.5rem 32px 4rem;
+  }
+  body #app #section-intro {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #app #section-intro div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 16px;
+    font-size: 1rem;
+    padding: 40px 0;
+  }
+  body #app #section-intro #img-intro {
+    width: 53%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 0;
+    position: static;
+  }
+  body #app #section-news {
+    padding-inline: 68px;
+    -webkit-column-gap: 48px;
+            column-gap: 48px;
+  }
+  body #app #section-news div {
+    width: 45%;
+  }
+  body #app #section-news article {
+    width: 45%;
+    row-gap: 16px;
+    padding: 20px 20px 0;
+  }
+  body #app #section-news article header h3 {
+    font-size: 1.2rem;
+  }
+  body #app #section-info {
+    padding-inline: 256px;
+  }
+  body #app #section-statistics {
+    padding-inline: 14%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body #app footer {
+    padding-inline: 60px;
+  }
+  body #app footer #footer-linkList .footer-linkGroup {
+    width: 30%;
+  }
+  body #app footer #footer-contact {
+    padding: 0 130px;
+  }
+  body #app footer #footer-contact li:last-child::before {
+    content: "";
+    margin: 0 8px;
+    background: #3A3F42;
+    display: inline-block;
+    width: 2px;
+    height: 20px;
+    rotate: 22deg;
+    vertical-align: middle;
+  }
 }
 /*# sourceMappingURL=style.css.map */

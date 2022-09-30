@@ -13,14 +13,14 @@ import IconArrow from "./icons/IconArrow.vue";
     .link-button {
       display:flex;
       align-items: center;
-      font-size: 1.1rem;
-      font-weight: 600;
+      font-size: 0.9rem;
+      font-weight: 700;
       color: #F5D90A;
       background-color: #151718;
       border: 1px solid #3A3F42;
       border-radius: 99px;
       width:fit-content;
-      padding: 10px 24px;
+      padding: 6px 20px;
 
       .iconArrow{
         margin-left: 0.5rem;

@@ -12,8 +12,10 @@ import Button from "./Button.vue";
   <article class="item">
     <header class="cardHeading">
       <slot></slot>
-      <h3>{{ heading }}</h3>
-      <p class="date">Publicerad {{ date }}</p>
+      <div>
+        <h3>{{ heading }}</h3>
+        <p class="date">Publicerad {{ date }}</p>
+      </div>
     </header>
     <p>{{ text }}</p>
     <Button>{{ buttonText }}</Button>
@@ -21,5 +23,5 @@ import Button from "./Button.vue";
 </template>
 
 <style scoped lang="scss">
-
+  
 </style>

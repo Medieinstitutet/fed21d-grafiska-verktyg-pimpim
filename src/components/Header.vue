@@ -10,14 +10,25 @@
     export default {
       data(){
         return{
-          menuOpen: false
+          menuOpen: false,
+          screenWidth: document.documentElement.clientWidth
+        }
+      },
+      mounted(){
+        window.addEventListener('resize', this.getWidth)
+      },
+
+      methods: {
+        getWidth(){
+          this.screenWidth = document.documentElement.clientWidth
         }
       }
     }
+    
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="wrapper" v-if="screenWidth <= 900" >
     <IconLogo id="header-logo" />
     <button @click="menuOpen = !menuOpen">
       <IconBurger id="iconBurger" v-if="!menuOpen" />
@@ -29,21 +40,5 @@
 </template>
 
 <style scoped lang="scss">
-  .wrapper{
-    display:flex;
-    justify-content: space-between;
-
-    #header-logo{
-      z-index: 999;
-    }
-
-    #iconCross{
-      z-index: 999;
-      width:1.5rem;
-      height:1.5rem;
-      place-self: end;
-      position:relative;
-      cursor:pointer;
-    }
-  }
+  
 </style>

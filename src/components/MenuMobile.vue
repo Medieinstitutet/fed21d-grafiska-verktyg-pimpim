@@ -50,6 +50,7 @@
 
       ul{
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         row-gap: 36px;
         margin: 0;

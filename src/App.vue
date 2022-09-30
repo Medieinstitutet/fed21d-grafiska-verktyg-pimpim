@@ -57,33 +57,5 @@
 </template>
 
 <style scoped lang="scss">
-  #section-intro{
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
-
-    #img-intro{
-      width:100vw;
-      position: relative;
-      left:-2rem;
-      margin-top: 40px;
-    }
-  }
-
-  #section-statistics {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 9rem;
-    row-gap: 4rem;
-
-    h2{
-      width: 100%;
-      color: #ECEDEE;
-      font-size: 1.8rem;
-      text-align: center;
-      margin: 0;
-    }
-  }
 
 </style>

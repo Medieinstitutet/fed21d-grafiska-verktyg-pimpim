@@ -28,31 +28,5 @@ import Button from "./Button.vue";
 </template>
 
 <style lang="scss">
-  #section-info{
-    background-color: #1A1D1E;
-    border-top: 1px solid #3A3F42;
-    border-bottom: 1px solid #3A3F42;
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 5rem;
-
-    div{
-      display:flex;
-      flex-direction: column;
-      row-gap: 0.9rem;
-
-      h2{
-        margin:0;
-      }
-
-      p{
-        font-size: 1.1rem;
-        line-height: 1.6;
-      }
-
-      .link-button{
-        margin-top: 0.5rem;
-      }
-    }    
-  }
+  
 </style>

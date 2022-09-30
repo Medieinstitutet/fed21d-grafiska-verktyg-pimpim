@@ -23,7 +23,7 @@
 
     h3{
       color: #ECEDEE;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       margin: 0;
     }
 
@@ -32,17 +32,17 @@
       border-radius: 50%;
       padding: 5px;
       text-align: center;
-      width: 11rem;
-      height: 11rem;
+      width: 128px;
+      height: 128px;
 
       p{
-        height:10rem;
+        height:112px;
         background-color: #F5D90A;
         border-radius: 50%;
-        line-height: 10rem;
+        line-height: 112px;
         color: #151718;
         font-weight: 700;
-        font-size: 1.9rem;
+        font-size: 1.5rem;
       }
     }
   }

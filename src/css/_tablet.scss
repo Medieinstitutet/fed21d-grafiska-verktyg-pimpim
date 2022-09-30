@@ -1,0 +1,75 @@
+body{
+  #app{
+    section{
+      padding:2.5rem 32px 4rem;
+    }
+    #section-intro{
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      align-items: center;
+
+      div{
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        font-size: 1rem;
+        padding: 40px 0;
+      }
+      #img-intro{
+        width: 53%;
+        height:fit-content;
+        margin-top: 0;
+        position: static;
+      }
+    }
+
+    #section-news{
+      padding-inline: 68px;
+      column-gap: 48px;
+      
+      div{
+        width:45%;
+      }
+
+      article{
+        width: 45%;
+        row-gap: 16px;
+        padding: 20px 20px 0;
+
+        header{
+          h3{
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    #section-info{
+      padding-inline: 256px;
+    }
+
+    #section-statistics{
+      padding-inline: 14%;
+      justify-content: space-between;
+    }
+
+    footer{
+      padding-inline: 60px;
+      #footer-linkList{
+        .footer-linkGroup{
+          width: 30%;
+        }
+      }
+      #footer-contact{
+        padding: 0 130px;
+
+        li{
+          &:last-child::before{
+            @include afterSlash
+          }
+        }
+      }
+    }
+  }
+}
+
