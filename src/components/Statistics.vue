@@ -19,7 +19,8 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    gap: 14px;
+    row-gap: 14px;
+    column-gap: 183px;    
 
     h3{
       color: #ECEDEE;

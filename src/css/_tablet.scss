@@ -1,26 +1,30 @@
 body{
   #app{
     #header-app{
-      padding: 71px 40px 0;
-      column-gap: 25px;
+      @media  screen and (max-width: 1024px) {
+        
+      }
+
+      ul{
+        align-items: center;
+      }
     }
     section{
-      padding:2.5rem 32px 4rem;
+      padding: 96px 0;
     }
     #section-intro{
-      justify-content: space-between;
       flex-wrap: nowrap;
       align-items: center;
 
+
       div{
-        display: flex;
-        flex-direction: column;
-        row-gap: 16px;
         font-size: 1rem;
         padding: 40px 0;
+        width:389px;
       }
+
       #img-intro{
-        width: 53%;
+        max-width: 53%;
         height:fit-content;
         margin-top: 0;
         position: static;
@@ -28,19 +32,18 @@ body{
     }
 
     #section-news{
-      padding-inline: 68px;
       column-gap: 48px;
       
-      div{
-        width:47%;
+      div:first-of-type{
+        width: 420px;
       }
 
       article{
-        width:47%;
+        width: 420px;
         row-gap: 16px;
         padding: 20px 20px 0;
 
-        header{
+        .cardHeading{
           h3{
             font-size: 1.2rem;
           }
@@ -48,40 +51,39 @@ body{
       }
     }
 
-    #section-info{
+    #section-info {
       padding-inline: 256px;
     }
 
     #section-statistics{
-      padding-inline: 14%;
-      justify-content: space-between;
+      column-gap: 130px;
     }
 
     footer{
-      padding-inline: 60px;
       #footer-linkList{
+        @media screen and (max-width: 1024px) {
+          width:800px;
+        }
+        
         .footer-linkGroup{
           width: 30%;
+
+          li{
+            width: 100%;
+          }
         }
       }
       #footer-contact{
         padding: 0 130px;
 
-        li{
-          &:last-child::before{
-            @include afterSlash
+        @media screen and (max-width: 1024px) {
+          li{
+            &:last-child::before{
+              @include afterSlash
+            }
           }
         }
       }
-    }
-
-    #cookies{
-      position: fixed;
-      width: 50%;
-      right: 3.5px;
-      justify-content: start;
-      column-gap: 8px;
-      padding: 32px;
     }
   }
 }

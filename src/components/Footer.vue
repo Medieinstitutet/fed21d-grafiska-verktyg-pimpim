@@ -55,11 +55,11 @@
   </ul>
 
   <ul id="footer-contact">
-    <li>Växel: <span>+46 8 508 30 200</span></li>
-    <li>E-post: <span>info@stokab.se</span></li>
-    <li><span>Box 711, 120 02 Årsta</span></li>
-    <li>Org.nr: <span>556475-6467</span></li>
-    <li>Besöksadress: <span>Pastellvägen 6, Johanneshov</span></li>
+    <li><p><span>Växel: </span>+46 8 508 30 200</p></li>
+    <li><p><span>E-post: </span>info@stokab.se</p></li>
+    <li><p>Box 711, 120 02 Årsta</p></li>
+    <li><p><span>Org.nr: </span>556475-6467</p></li>
+    <li><p><span>Besöksadress: </span>Pastellvägen 6, Johanneshov</p></li>
     <li><Button>Hitta hit</Button></li>
   </ul>
 

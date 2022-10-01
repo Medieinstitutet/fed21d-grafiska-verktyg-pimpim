@@ -13,7 +13,7 @@
   .link-button {
     display:flex;
     align-items: center;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: #F5D90A;
     background-color: #151718;
@@ -24,8 +24,8 @@
 
     .iconArrow{
       margin-left: 0.5rem;
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 20px;
+      height: 20px;
     }
   }
 </style>

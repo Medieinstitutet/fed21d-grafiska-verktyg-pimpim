@@ -24,7 +24,7 @@
 
 <style lang="scss">
   .logotype{
-    width: 100px;
+    width: 102px;
     height: 19px;
     color: #F5D90A;
   }

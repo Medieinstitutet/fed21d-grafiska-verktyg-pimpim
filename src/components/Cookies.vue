@@ -66,4 +66,15 @@
       }
     }
   }
+
+  @media screen and (min-width: 768px){
+    #cookies{
+      position: fixed;
+      width: 50%;
+      right: 3.5px;
+      justify-content: start;
+      column-gap: 8px;
+      padding: 32px;
+    }
+  }
 </style>>

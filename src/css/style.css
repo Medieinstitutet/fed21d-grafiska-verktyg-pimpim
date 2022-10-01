@@ -14,6 +14,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body a {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
 body ul {
   padding: 0;
   margin: 0;
@@ -40,56 +46,154 @@ body p {
 
 body #app {
   font-family: 'Plus Jakarta Sans', sans-serif;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+body #app section {
+  padding: 48px 0;
 }
 
 body #app #header-app {
-  padding: 1.7rem 2rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  padding: 16px 32px;
 }
 
-@media screen and (min-width: 768px) {
-  body #app #header-app #header-logo {
-    z-index: 999;
+body #app #header-app #header-logo {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (max-width: 767px) {
+  body #app #header-app .menu-mobile {
+    -ms-grid-column: 13;
+    grid-column: 13;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    z-index: 998;
   }
-  body #app #header-app nav {
-    width: 100%;
+  body #app #header-app .menu-mobile nav {
+    background-color: #1A1D1E;
+    border: 1px solid #3A3F42;
+    border-radius: 8px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 98.5%;
+    text-align: right;
+    padding: 2rem 2rem 1.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 24px;
+    z-index: 996;
+  }
+  body #app #header-app .menu-mobile nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  body #app #header-app .menu-mobile nav #nav-primary {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin-top: 3rem;
+  }
+  body #app #header-app .menu-mobile nav .nav-inputWrapper {
+    width: 100%;
+  }
+  body #app #header-app .menu-mobile button {
+    padding: 0;
+  }
+  body #app #header-app .menu-mobile #iconBurger {
+    height: 1.1rem;
+    width: 1.3rem;
+  }
+  body #app #header-app .menu-mobile #iconCross {
+    z-index: 999;
+    width: 18px;
+    place-self: end;
+    position: relative;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body #app #header-logo {
+    z-index: 999;
+  }
+  body #app nav {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 11;
+    grid-column: 2/ span 11;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / span 2;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    -webkit-column-gap: 16px;
+            column-gap: 16px;
+    row-gap: 8px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    row-gap: 25px;
-    position: relative;
-    top: -48px;
   }
-  body #app #header-app nav #nav-primary {
+  body #app nav #nav-primary {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 10;
+    grid-column: 1 / span 10;
     -webkit-column-gap: 20px;
             column-gap: 20px;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
     margin: 0;
   }
-  body #app #header-app nav #nav-secondary {
+  body #app nav #nav-secondary {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 /span 12;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
     -webkit-column-gap: 24px;
             column-gap: 24px;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
     width: 100%;
   }
-  body #app #header-app nav #nav-secondary li:not(:last-child)::after {
+  body #app nav #nav-secondary li:not(:last-child)::after {
     content: "";
     margin: 0 8px;
     background: #3A3F42;
@@ -100,39 +204,37 @@ body #app #header-app {
     vertical-align: middle;
     margin-left: 24px;
   }
-  body #app #header-app nav .nav-inputWrapper {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+  body #app nav .nav-inputWrapper {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 10;
+    -ms-grid-column-span: 3;
+    grid-column: 10/ span 3;
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
-  body #app #header-app nav .nav-inputWrapper input {
+  body #app nav .nav-inputWrapper input {
     font-size: 1rem;
   }
-  body #app #header-app nav .nav-inputWrapper input::-webkit-input-placeholder {
+  body #app nav .nav-inputWrapper input::-webkit-input-placeholder {
     font-size: 1rem;
   }
-  body #app #header-app nav .nav-inputWrapper input:-ms-input-placeholder {
+  body #app nav .nav-inputWrapper input:-ms-input-placeholder {
     font-size: 1rem;
   }
-  body #app #header-app nav .nav-inputWrapper input::-ms-input-placeholder {
+  body #app nav .nav-inputWrapper input::-ms-input-placeholder {
     font-size: 1rem;
   }
-  body #app #header-app nav .nav-inputWrapper input::placeholder {
+  body #app nav .nav-inputWrapper input::placeholder {
     font-size: 1rem;
   }
 }
 
-body #app #header-app nav a {
-  color: white;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
-body #app #header-app nav #nav-secondary a {
+body #app nav #nav-secondary a {
   color: #9BA1A6;
 }
 
-body #app #header-app nav .nav-inputWrapper {
+body #app nav .nav-inputWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,15 +246,14 @@ body #app #header-app nav .nav-inputWrapper {
           align-items: center;
 }
 
-body #app #header-app nav .nav-inputWrapper .iconMagnifier {
-  z-index: 997;
+body #app nav .nav-inputWrapper .iconMagnifier {
   position: absolute;
-  margin-left: 20px;
+  margin-left: 22px;
   margin-bottom: 2px;
-  width: 20px;
+  width: 16px;
 }
 
-body #app #header-app nav .nav-inputWrapper input {
+body #app nav .nav-inputWrapper input {
   background-color: #1A1D1E;
   color: #697177;
   border: none;
@@ -160,110 +261,55 @@ body #app #header-app nav .nav-inputWrapper input {
   border-radius: 99px;
   font-weight: 300;
   width: 100%;
-  padding: 6px 55px;
+  padding: 6px 48px;
 }
 
-body #app #header-app nav .nav-inputWrapper input::-webkit-input-placeholder {
+body #app nav .nav-inputWrapper input::-webkit-input-placeholder {
   color: #697177;
-  font-style: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1rem;
 }
 
-body #app #header-app nav .nav-inputWrapper input:-ms-input-placeholder {
+body #app nav .nav-inputWrapper input:-ms-input-placeholder {
   color: #697177;
-  font-style: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1rem;
 }
 
-body #app #header-app nav .nav-inputWrapper input::-ms-input-placeholder {
+body #app nav .nav-inputWrapper input::-ms-input-placeholder {
   color: #697177;
-  font-style: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1rem;
 }
 
-body #app #header-app nav .nav-inputWrapper input::placeholder {
+body #app nav .nav-inputWrapper input::placeholder {
   color: #697177;
-  font-style: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1rem;
 }
 
-body #app #header-app nav .nav-inputWrapper input:focus-visible {
+body #app nav .nav-inputWrapper input:focus-visible {
   outline: 2px solid #245530;
   border: 1px solid #46A758;
-}
-
-body #app #header-app .menu-mobile {
-  z-index: 998;
-}
-
-body #app #header-app .menu-mobile nav {
-  background-color: #1A1D1E;
-  border: 1px solid #3A3F42;
-  border-radius: 8px;
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 98.5%;
-  text-align: right;
-  padding: 2rem 2rem 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 24px;
-  z-index: 996;
-}
-
-body #app #header-app .menu-mobile nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 24px;
-  margin: 0;
-  padding: 0;
-}
-
-body #app #header-app .menu-mobile nav #nav-primary {
-  -webkit-box-ordinal-group: 1;
-      -ms-flex-order: 0;
-          order: 0;
-  margin-top: 3rem;
-}
-
-body #app #header-app .menu-mobile #iconBurger {
-  height: 1.1rem;
-  width: 1.3rem;
-}
-
-body #app #header-app .menu-mobile #iconCross {
-  z-index: 999;
-  width: 1.5rem;
-  height: 1.5rem;
-  place-self: end;
-  position: relative;
-  cursor: pointer;
-}
-
-body #app section {
-  padding: 2.5rem 24px 3rem;
 }
 
 body #app #section-intro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 1.4rem;
-  overflow: visible;
-  padding-bottom: 0;
+  row-gap: 48px;
+  -webkit-column-gap: 59px;
+          column-gap: 59px;
+}
+
+body #app #section-intro div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 16px;
+  min-width: 342px;
+  max-width: 390px;
 }
 
 body #app #section-intro div h1 {
@@ -284,7 +330,6 @@ body #app #section-intro div p:first-of-type {
 body #app #section-intro #img-intro {
   width: 100vw;
   margin-top: 40px;
-  left: -24px;
   position: relative;
 }
 
@@ -295,12 +340,12 @@ body #app #section-news {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 42px 48px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-body #app #section-news div {
+body #app #section-news div:first-of-type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,13 +357,14 @@ body #app #section-news div {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  width: 342px;
 }
 
-body #app #section-news div h2 {
+body #app #section-news div:first-of-type h2 {
   font-size: 1.25rem;
 }
 
-body #app #section-news div p {
+body #app #section-news div:first-of-type p {
   font-weight: 700;
   font-size: 0.85rem;
   padding: 0 2rem;
@@ -339,6 +385,7 @@ body #app #section-news article {
   border-radius: 1rem;
   background-color: #1A1D1E;
   padding: 16px 14px 0;
+  width: 342px;
 }
 
 body #app #section-news article .cardHeading {
@@ -357,7 +404,6 @@ body #app #section-news article .cardHeading img {
 
 body #app #section-news article .cardHeading div {
   text-align: left;
-  width: auto;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
@@ -395,6 +441,9 @@ body #app #section-info {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   row-gap: 5rem;
 }
 
@@ -407,15 +456,17 @@ body #app #section-info div {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 0.9rem;
+  width: 342px;
 }
 
 body #app #section-info div h2 {
   margin: 0;
+  font-size: 1.25rem;
 }
 
 body #app #section-info div p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 22px;
 }
 
 body #app #section-info div .link-button {
@@ -432,6 +483,8 @@ body #app #section-statistics {
       -ms-flex-pack: center;
           justify-content: center;
   row-gap: 4rem;
+  -webkit-column-gap: 180px;
+          column-gap: 180px;
 }
 
 body #app #section-statistics h2 {
@@ -440,6 +493,9 @@ body #app #section-statistics h2 {
   font-size: 1.8rem;
   text-align: center;
   margin: 0;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
 }
 
 body button {
@@ -484,12 +540,16 @@ body footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   row-gap: 2rem;
 }
 
 body footer #footer-linkList {
   margin: 0;
-  width: 100%;
+  width: 342px;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -498,10 +558,6 @@ body footer #footer-linkList {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-body footer #footer-linkList:first-of-type {
-  padding: 0 2rem;
 }
 
 body footer #footer-linkList .footer-linkGroup:last-of-type .footer-links {
@@ -519,11 +575,16 @@ body footer #footer-linkList .footer-linkGroup .footer-links {
   padding: 1rem 0 2rem;
 }
 
+body footer #footer-linkList .footer-linkGroup .footer-links li {
+  width: 100%;
+}
+
 body footer #footer-linkList .footer-linkGroup .footer-links a {
   color: #ECEDEE;
   font-size: 0.9rem;
   font-weight: 300;
   line-height: 2.2;
+  width: 100%;
 }
 
 body footer #footer-linkList .footer-linkGroup .footer-links a img {
@@ -544,7 +605,7 @@ body footer div #footer-logo {
 }
 
 body footer #footer-contact {
-  padding: 0 16px;
+  padding: 0 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -553,7 +614,7 @@ body footer #footer-contact {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
-  row-gap: 15px;
+  row-gap: 9px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -564,7 +625,7 @@ body footer #footer-contact {
 
 body footer #footer-contact li {
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 300;
   vertical-align: middle;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -575,23 +636,27 @@ body footer #footer-contact li {
 }
 
 body footer #footer-contact li span {
-  font-weight: 300;
+  font-weight: 700;
 }
 
 body footer #footer-contact li:last-child {
   -ms-flex-preferred-size: content;
       flex-basis: content;
+  padding: 0 3rem;
 }
 
-body footer #footer-contact li:not(:last-child):nth-child(even)::before {
-  content: "";
-  margin: 0 8px;
-  background: #3A3F42;
-  display: inline-block;
-  width: 2px;
-  height: 20px;
-  rotate: 22deg;
-  vertical-align: middle;
+@media screen and (max-width: 767px) {
+  body footer #footer-contact li:not(:last-child):nth-child(even)::before {
+    content: "";
+    margin: 0 8px;
+    background: #3A3F42;
+    display: inline-block;
+    width: 2px;
+    height: 20px;
+    rotate: 22deg;
+    vertical-align: middle;
+    margin: 0 8px;
+  }
 }
 
 @font-face {
@@ -599,89 +664,70 @@ body footer #footer-contact li:not(:last-child):nth-child(even)::before {
   src: url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
+  body #app #header-app #header-logo {
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
   body #app #header-app nav {
-    top: -95px;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 9;
+    grid-column: 3/span 9;
   }
-  body #app #cookies {
-    max-width: 33%;
+  body #app main section {
+    padding: 128px 0;
   }
-}
-
-@media only screen and (min-width: 768px) {
-  body #app #header-app {
-    padding: 71px 40px 0;
-    -webkit-column-gap: 25px;
-            column-gap: 25px;
+  body #app main #section-intro {
+    -webkit-column-gap: 64px;
+            column-gap: 64px;
   }
-  body #app section {
-    padding: 2.5rem 32px 4rem;
+  body #app main #section-intro div {
+    width: 389px;
   }
-  body #app #section-intro {
+  body #app main #section-intro #img-intro {
+    width: 786px;
+  }
+  body #app main #section-news {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body #app main #section-news div:first-child {
+    padding: 0 4rem;
+  }
+  body #app main #section-news div:first-of-type, body #app main #section-news article {
+    width: 480px;
+  }
+  body #app main #section-info {
+    -webkit-column-gap: 64px;
+            column-gap: 64px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-inline: 0;
+  }
+  body #app main #section-info div {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    max-width: 349px;
   }
-  body #app #section-intro div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    row-gap: 16px;
-    font-size: 1rem;
-    padding: 40px 0;
+  body #app main #section-statistics {
+    -webkit-column-gap: 160px;
+            column-gap: 160px;
   }
-  body #app #section-intro #img-intro {
-    width: 53%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    margin-top: 0;
-    position: static;
-  }
-  body #app #section-news {
-    padding-inline: 68px;
-    -webkit-column-gap: 48px;
-            column-gap: 48px;
-  }
-  body #app #section-news div {
-    width: 47%;
-  }
-  body #app #section-news article {
-    width: 47%;
-    row-gap: 16px;
-    padding: 20px 20px 0;
-  }
-  body #app #section-news article header h3 {
-    font-size: 1.2rem;
-  }
-  body #app #section-info {
-    padding-inline: 256px;
-  }
-  body #app #section-statistics {
-    padding-inline: 14%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  body #app footer {
-    padding-inline: 60px;
-  }
-  body #app footer #footer-linkList .footer-linkGroup {
-    width: 30%;
+  body #app footer #footer-linkList {
+    width: 900px;
   }
   body #app footer #footer-contact {
-    padding: 0 130px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
-  body #app footer #footer-contact li:last-child::before {
+  body #app footer #footer-contact li:not(:last-child)::after {
     content: "";
     margin: 0 8px;
     background: #3A3F42;
@@ -691,16 +737,95 @@ body footer #footer-contact li:not(:last-child):nth-child(even)::before {
     rotate: 22deg;
     vertical-align: middle;
   }
+  body #app footer #footer-contact li:last-child {
+    padding: 0;
+  }
   body #app #cookies {
-    position: fixed;
-    width: 50%;
-    right: 3.5px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -webkit-column-gap: 8px;
-            column-gap: 8px;
-    padding: 32px;
+    max-width: 33%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body #app #header-app ul {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #app section {
+    padding: 96px 0;
+  }
+  body #app #section-intro {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #app #section-intro div {
+    font-size: 1rem;
+    padding: 40px 0;
+    width: 389px;
+  }
+  body #app #section-intro #img-intro {
+    max-width: 53%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 0;
+    position: static;
+  }
+  body #app #section-news {
+    -webkit-column-gap: 48px;
+            column-gap: 48px;
+  }
+  body #app #section-news div:first-of-type {
+    width: 420px;
+  }
+  body #app #section-news article {
+    width: 420px;
+    row-gap: 16px;
+    padding: 20px 20px 0;
+  }
+  body #app #section-news article .cardHeading h3 {
+    font-size: 1.2rem;
+  }
+  body #app #section-info {
+    padding-inline: 256px;
+  }
+  body #app #section-statistics {
+    -webkit-column-gap: 130px;
+            column-gap: 130px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body #app footer #footer-linkList {
+    width: 800px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body #app footer #footer-linkList .footer-linkGroup {
+    width: 30%;
+  }
+  body #app footer #footer-linkList .footer-linkGroup li {
+    width: 100%;
+  }
+  body #app footer #footer-contact {
+    padding: 0 130px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body #app footer #footer-contact li:last-child::before {
+    content: "";
+    margin: 0 8px;
+    background: #3A3F42;
+    display: inline-block;
+    width: 2px;
+    height: 20px;
+    rotate: 22deg;
+    vertical-align: middle;
   }
 }
 /*# sourceMappingURL=style.css.map */

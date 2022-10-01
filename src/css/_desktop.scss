@@ -2,21 +2,77 @@
 body{
   #app{
     #header-app{
+      #header-logo{
+        grid-column: 2;
+      }
 
       nav{
-        top:-95px;
+        grid-column: 3/span 9;
+      }
+    }
+    main{
+      section{
+        padding:128px 0;
+      }
+      #section-intro{
+        column-gap: 64px;
+
+        div{
+          width:389px;
+        }
+        #img-intro{
+          width:786px;
+        }
+      }
+
+      #section-news{
+        justify-content: center;
+
+        div:first-child{
+          padding: 0 4rem;
+        }
+
+        div:first-of-type, article{
+          width: 480px;
+        }
+       
+      }
+
+      #section-info{
+        column-gap: 64px;
+        justify-content: center;
+        padding-inline: 0;
+
+        div{
+          justify-content: space-between;
+          flex-grow: 0;
+          max-width: 349px;
+        }
+      }
+
+      #section-statistics{
+        column-gap: 160px;
       }
     }
 
-    //main{
-      //#section-intro{}
+    footer{
+      #footer-linkList{
+        width:900px;
+      }
 
-      //#section-news{}
+      #footer-contact {
+        width:max-content;
 
-      //#section-info{}
+        li:not(:last-child)::after{
+          @include afterSlash();
+        }
 
-      //#section-statistics{}
-    //}
+        li:last-child{
+          padding: 0;
+        }
+      }
+    }
+
     #cookies{
       max-width: 33%;
     }
