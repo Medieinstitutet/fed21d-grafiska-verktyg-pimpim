@@ -26,6 +26,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  ul{
+    padding: 0;
+    margin:0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   p{
     color: #ECEDEE;
     margin:0;
@@ -48,10 +55,52 @@ body {
       display:flex;
       justify-content: space-between;
 
-      #header-logo{
-        z-index: 999;
-      }
+      @media screen and (min-width: 768px) {
+        #header-logo{
+          z-index: 999;
+        }
 
+        nav{
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          row-gap: 25px;
+          position: relative;
+          top: -48px;
+  
+          #nav-primary{
+            column-gap: 20px;
+            order: 2;
+            margin: 0;
+          }
+      
+          #nav-secondary{
+            justify-content: end;
+            column-gap: 24px;
+            order: 1;
+            width: 100%;
+  
+            li:not(:last-child)::after{
+              @include afterSlash();
+              margin-left: 24px;
+            }
+          }
+  
+          .nav-inputWrapper{
+            order:3;
+            
+            input{
+              font-size: 1rem;
+  
+              &::placeholder{
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+      
       nav{
         a{
           color: white;

@@ -14,6 +14,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body ul {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 body p {
   color: #ECEDEE;
   margin: 0;
@@ -42,8 +52,74 @@ body #app #header-app {
           justify-content: space-between;
 }
 
-body #app #header-app #header-logo {
-  z-index: 999;
+@media screen and (min-width: 768px) {
+  body #app #header-app #header-logo {
+    z-index: 999;
+  }
+  body #app #header-app nav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    row-gap: 25px;
+    position: relative;
+    top: -48px;
+  }
+  body #app #header-app nav #nav-primary {
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 0;
+  }
+  body #app #header-app nav #nav-secondary {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-column-gap: 24px;
+            column-gap: 24px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+  }
+  body #app #header-app nav #nav-secondary li:not(:last-child)::after {
+    content: "";
+    margin: 0 8px;
+    background: #3A3F42;
+    display: inline-block;
+    width: 2px;
+    height: 20px;
+    rotate: 22deg;
+    vertical-align: middle;
+    margin-left: 24px;
+  }
+  body #app #header-app nav .nav-inputWrapper {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  body #app #header-app nav .nav-inputWrapper input {
+    font-size: 1rem;
+  }
+  body #app #header-app nav .nav-inputWrapper input::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  body #app #header-app nav .nav-inputWrapper input:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  body #app #header-app nav .nav-inputWrapper input::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  body #app #header-app nav .nav-inputWrapper input::placeholder {
+    font-size: 1rem;
+  }
 }
 
 body #app #header-app nav a {
@@ -523,84 +599,20 @@ body footer #footer-contact li:not(:last-child):nth-child(even)::before {
   src: url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
+  body #app #header-app nav {
+    top: -95px;
+  }
+  body #app #cookies {
+    max-width: 33%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   body #app #header-app {
     padding: 71px 40px 0;
     -webkit-column-gap: 25px;
             column-gap: 25px;
-  }
-  body #app #header-app nav {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    row-gap: 25px;
-    position: relative;
-    top: -48px;
-  }
-  body #app #header-app nav #nav-primary {
-    -webkit-column-gap: 20px;
-            column-gap: 20px;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    margin: 0;
-  }
-  body #app #header-app nav #nav-secondary {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-    -webkit-column-gap: 24px;
-            column-gap: 24px;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    width: 100%;
-  }
-  body #app #header-app nav #nav-secondary li:not(:last-child)::after {
-    content: "";
-    margin: 0 8px;
-    background: #3A3F42;
-    display: inline-block;
-    width: 2px;
-    height: 20px;
-    rotate: 22deg;
-    vertical-align: middle;
-    margin-left: 24px;
-  }
-  body #app #header-app nav .nav-inputWrapper {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  body #app #header-app nav .nav-inputWrapper input {
-    font-size: 1rem;
-  }
-  body #app #header-app nav .nav-inputWrapper input::-webkit-input-placeholder {
-    font-size: 1rem;
-  }
-  body #app #header-app nav .nav-inputWrapper input:-ms-input-placeholder {
-    font-size: 1rem;
-  }
-  body #app #header-app nav .nav-inputWrapper input::-ms-input-placeholder {
-    font-size: 1rem;
-  }
-  body #app #header-app nav .nav-inputWrapper input::placeholder {
-    font-size: 1rem;
-  }
-  body #app #header-app nav ul {
-    padding: 0;
-    margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
   body #app section {
     padding: 2.5rem 32px 4rem;
@@ -689,15 +701,6 @@ body footer #footer-contact li:not(:last-child):nth-child(even)::before {
     -webkit-column-gap: 8px;
             column-gap: 8px;
     padding: 32px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #app {
-    padding: 24px 60px 48px;
-  }
-  #app #cookies {
-    max-width: 33%;
   }
 }
 /*# sourceMappingURL=style.css.map */

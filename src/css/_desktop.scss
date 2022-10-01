@@ -1,7 +1,24 @@
-#app{
-  padding: 24px 60px 48px;
 
-  #cookies{
-    max-width: 33%;
+body{
+  #app{
+    #header-app{
+
+      nav{
+        top:-95px;
+      }
+    }
+
+    //main{
+      //#section-intro{}
+
+      //#section-news{}
+
+      //#section-info{}
+
+      //#section-statistics{}
+    //}
+    #cookies{
+      max-width: 33%;
+    }
   }
 }

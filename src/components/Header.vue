@@ -5,7 +5,7 @@
   import IconLogo from './icons/IconLogo.vue';
   import { ref } from 'vue';
 
-  const screenWidth = ref()
+  const screenWidth = ref(document.documentElement.clientWidth)
   const menuOpen = ref(false)
 
   window.addEventListener('resize', () => {
