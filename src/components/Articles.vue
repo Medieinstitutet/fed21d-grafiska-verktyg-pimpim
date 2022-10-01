@@ -30,8 +30,3 @@
     <img src="../assets/post3.jpg" /> 
   </Article>
 </template>
-
-<style lang="scss">
-  
-</style>
-

@@ -1,32 +1,32 @@
 <script setup lang="ts">
-import IconArrow from "./icons/IconArrow.vue";
-  </script>
+  import IconArrow from "./icons/IconArrow.vue";
+</script>
   
-  <template>
-    <a href="#" class="link-button">
-      <slot></slot> 
-      <icon-arrow class="iconArrow"/>
-    </a>
-  </template>
+<template>
+  <a href="#" class="link-button">
+    <slot></slot> 
+    <icon-arrow class="iconArrow"/>
+  </a>
+</template>
   
-  <style scoped lang="scss">
-    .link-button {
-      display:flex;
-      align-items: center;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: #F5D90A;
-      background-color: #151718;
-      border: 1px solid #3A3F42;
-      border-radius: 99px;
-      width:fit-content;
-      padding: 6px 20px;
+<style scoped lang="scss">
+  .link-button {
+    display:flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #F5D90A;
+    background-color: #151718;
+    border: 1px solid #3A3F42;
+    border-radius: 99px;
+    width:fit-content;
+    padding: 6px 20px;
 
-      .iconArrow{
-        margin-left: 0.5rem;
-        width: 1.5rem;
-        height: 1.5rem;
-      }
+    .iconArrow{
+      margin-left: 0.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
     }
-  </style>
+  }
+</style>
   

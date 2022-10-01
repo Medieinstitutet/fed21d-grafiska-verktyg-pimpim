@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import Button from "./Button.vue";
-import IconLogo from "./icons/IconLogo.vue";
-
+  import Button from "./Button.vue";
+  import IconLogo from "./icons/IconLogo.vue";
 </script>
 
 <template>
-  <ul id=footer-linkList>
+  <ul id="footer-linkList">
     <li class="footer-linkGroup">
       Genvägar
       <ul class="footer-links">
@@ -69,7 +68,3 @@ import IconLogo from "./icons/IconLogo.vue";
     <p class="date">©2022 Stokab</p>
   </div>
 </template>
-
-<style lang="scss">
-  
-</style>

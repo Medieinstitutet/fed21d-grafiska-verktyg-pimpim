@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Button from "./Button.vue";
+  import Button from "./Button.vue";
   defineProps<{
       heading: string
       date: string
@@ -21,7 +21,3 @@ import Button from "./Button.vue";
     <Button>{{ buttonText }}</Button>
   </article>
 </template>
-
-<style scoped lang="scss">
-  
-</style>

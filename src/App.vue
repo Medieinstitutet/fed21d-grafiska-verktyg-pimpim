@@ -6,22 +6,11 @@
   import Statistics from './components/Statistics.vue'
   import Footer from './components/Footer.vue'
   import Cookies from './components/Cookies.vue'
+  import { ref } from 'vue'
+
+  const showCookies = ref(true)
 </script>
 
-<script lang="ts">
-  export default {
-    data(){
-      return{
-        cookiesOpen: true
-      }
-    },
-    methods: {
-      acceptCookies(){
-        this.cookiesOpen = false
-      }
-    }
-  }
-</script>
 
 <template>
   <header id="header-app">
@@ -53,9 +42,5 @@
     <Footer />
   </footer>
 
-  <Cookies v-if=cookiesOpen v-on:accept-cookies="acceptCookies" />
+  <Cookies v-if=showCookies @show="(value) => showCookies = false" />
 </template>
-
-<style scoped lang="scss">
-
-</style>

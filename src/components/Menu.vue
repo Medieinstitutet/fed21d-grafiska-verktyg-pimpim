@@ -1,6 +1,3 @@
-<script setup lang="ts">
-</script>
-
 <template>
   <nav>
       <ul id="nav-primary">
@@ -23,8 +20,3 @@
       </div>
   </nav>
 </template>
-
-<style scoped lang="scss">
-  
-</style>
-

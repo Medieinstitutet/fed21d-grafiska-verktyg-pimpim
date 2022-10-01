@@ -691,4 +691,13 @@ body footer #footer-contact li:not(:last-child):nth-child(even)::before {
     padding: 32px;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  #app {
+    padding: 24px 60px 48px;
+  }
+  #app #cookies {
+    max-width: 33%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

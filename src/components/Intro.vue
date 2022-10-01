@@ -23,8 +23,3 @@
     <Button :style="primaryButton">Kontakta oss</Button>
   </div>
 </template>
-
-<style>
-  
-</style>
-
