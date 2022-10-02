@@ -208,7 +208,7 @@ body #app #header-app #header-logo {
     width: 100%;
   }
   body #app #header-app nav #nav-secondary li:not(:last-child)::after {
-    content: "";
+    content: '';
     margin: 0 8px;
     background: #3A3F42;
     display: inline-block;
@@ -353,11 +353,11 @@ body #app #section-intro #img-intro {
 }
 
 body #app #section-news {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(1fr, 480px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(1fr, 480px));
+  justify-items: stretch;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -380,7 +380,12 @@ body #app #section-news div:first-child {
           flex-direction: column;
   text-align: center;
   row-gap: 13px;
-  width: 342px;
+}
+
+@media screen and (max-width: 767px) {
+  body #app #section-news div:first-child {
+    width: 342px;
+  }
 }
 
 body #app #section-news div:first-child p {
@@ -403,7 +408,12 @@ body #app #section-news article {
           justify-content: space-between;
   background-color: #1A1D1E;
   padding: 16px 14px 0;
-  width: 342px;
+}
+
+@media screen and (max-width: 767px) {
+  body #app #section-news article {
+    width: 342px;
+  }
 }
 
 body #app #section-news article .cardHeading {
@@ -434,7 +444,7 @@ body #app #section-news article p:not(.date) {
 body #app #section-news article .link-button {
   place-self: center;
   position: relative;
-  bottom: -1.2rem;
+  bottom: -1rem;
 }
 
 body #app #section-info {
@@ -444,8 +454,8 @@ body #app #section-info {
   border-bottom: 1px solid #4C5155;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(342px, 512px))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(342px, 512px));
+  -ms-grid-columns: (minmax(342px, 512px))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(342px, 512px));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -610,6 +620,8 @@ body footer #footer-contact {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   row-gap: 9px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -633,15 +645,12 @@ body footer #footer-contact li span {
   font-weight: 700;
 }
 
-body footer #footer-contact li:last-child {
-  -ms-flex-preferred-size: content;
-      flex-basis: content;
-  padding: 0 3rem;
-}
-
 @media screen and (max-width: 767px) {
+  body footer #footer-contact li:last-child {
+    padding: 0 3rem;
+  }
   body footer #footer-contact li:not(:last-child):nth-child(even)::before {
-    content: "";
+    content: '';
     margin: 0 8px;
     background: #3A3F42;
     display: inline-block;
@@ -649,12 +658,12 @@ body footer #footer-contact li:last-child {
     height: 20px;
     rotate: 22deg;
     vertical-align: middle;
-    margin: 0 8px;
+    margin-right: 16px;
   }
 }
 
 @font-face {
-  font-family: "Plus Jakarta Sans";
+  font-family: 'Plus Jakarta Sans';
   src: url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
 }
 
@@ -669,6 +678,7 @@ body footer #footer-contact li:last-child {
     grid-column: 3/span 9;
   }
   body #app main #section-intro {
+    padding: 128px 60px;
     -webkit-column-gap: 64px;
             column-gap: 64px;
   }
@@ -679,22 +689,20 @@ body footer #footer-contact li:last-child {
     width: 786px;
   }
   body #app main #section-news {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    padding: 128px 60px;
+    -ms-grid-columns: (minmax(420px, 480px))[2];
+        grid-template-columns: repeat(2, minmax(420px, 480px));
   }
   body #app main #section-news div:first-child {
     padding: 0 4rem;
   }
-  body #app main #section-news div:first-of-type, body #app main #section-news article {
-    width: 480px;
-  }
   body #app main #section-info {
     -webkit-column-gap: 50px;
             column-gap: 50px;
-    padding-inline: 100px;
+    padding: 128px 60px;
     -ms-grid-columns: (340px)[auto-fill];
         grid-template-columns: repeat(auto-fill, 340px);
+    grid-auto-columns: 340px;
   }
   body #app main #section-info div {
     -webkit-box-pack: justify;
@@ -708,7 +716,7 @@ body footer #footer-contact li:last-child {
             column-gap: 160px;
   }
   body #app footer {
-    padding: 128px 60px;
+    padding: 64px 0 48px;
   }
   body #app footer #footer-linkList {
     -webkit-column-gap: 2rem;
@@ -718,9 +726,10 @@ body footer #footer-contact li:last-child {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    padding: 0;
   }
   body #app footer #footer-contact li:not(:last-child)::after {
-    content: "";
+    content: '';
     margin: 0 8px;
     background: #3A3F42;
     display: inline-block;
@@ -728,6 +737,7 @@ body footer #footer-contact li:last-child {
     height: 20px;
     rotate: 22deg;
     vertical-align: middle;
+    margin-left: 16px;
   }
   body #app footer #footer-contact li:last-child {
     padding: 0;
@@ -765,14 +775,18 @@ body footer #footer-contact li:last-child {
     position: static;
   }
   body #app #section-news {
+    padding: 96px 32px;
+    -ms-grid-columns: (minmax(342px, 420px))[2];
+        grid-template-columns: repeat(2, minmax(342px, 420px));
     -webkit-column-gap: 48px;
             column-gap: 48px;
   }
-  body #app #section-news div:first-of-type {
-    width: 420px;
+  body #app #section-news div:first-child {
+    max-width: 420px;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   body #app #section-news article {
-    width: 420px;
     row-gap: 16px;
     padding: 20px 20px 0;
   }
@@ -781,7 +795,7 @@ body footer #footer-contact li:last-child {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1024) {
   body #app #section-info {
     padding-inline: 200px;
   }
@@ -795,9 +809,15 @@ body footer #footer-contact li:last-child {
     -webkit-column-gap: 130px;
             column-gap: 130px;
   }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   body #app footer {
     padding: 96px 32px;
   }
+}
+
+@media only screen and (min-width: 768px) {
   body #app footer #footer-linkList {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -813,14 +833,17 @@ body footer #footer-contact li:last-child {
   body #app footer #footer-linkList .footer-linkGroup {
     width: 220px;
   }
-  body #app footer #footer-contact {
-    padding: 0 130px;
-  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  body #app footer #footer-contact li:last-child::before {
-    content: "";
+  body #app footer #footer-contact {
+    width: 640px;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    padding: 0;
+  }
+  body #app footer #footer-contact li:not(:last-child):not(:nth-child(3))::after {
+    content: '';
     margin: 0 8px;
     background: #3A3F42;
     display: inline-block;
@@ -828,6 +851,10 @@ body footer #footer-contact li:last-child {
     height: 20px;
     rotate: 22deg;
     vertical-align: middle;
+    margin-left: 12px;
+  }
+  body #app footer #footer-contact:last-child {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

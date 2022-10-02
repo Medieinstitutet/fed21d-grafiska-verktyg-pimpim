@@ -12,6 +12,7 @@ body{
     }
     main{
       #section-intro{
+        padding:$paddingDesktop;
         column-gap: 64px;
 
         div{
@@ -23,26 +24,23 @@ body{
       }
 
       #section-news{
-        justify-content: center;
+        padding: $paddingDesktop;
+        grid-template-columns: repeat(2, minmax(420px, 480px));
 
         div:first-child{
           padding: 0 4rem;
-        }
-
-        div:first-of-type, article{
-          width: 480px;
         }
       }
 
       #section-info{
         column-gap: 50px;
-        padding-inline: 100px;
+        padding:$paddingDesktop;
         grid-template-columns: repeat(auto-fill, 340px);
+        grid-auto-columns:340px;
 
         div{
           justify-content: space-between;
           width:340px;
-
         }
       }
 
@@ -53,16 +51,18 @@ body{
     }
 
     footer{
-      padding: $paddingDesktop;
+      padding: 64px 0 48px;
       #footer-linkList{
         column-gap: 2rem;
       }
 
       #footer-contact {
         width:fit-content;
+        padding: 0;
 
         li:not(:last-child)::after{
           @include afterSlash();
+          margin-left: 16px;
         }
 
         li:last-child{

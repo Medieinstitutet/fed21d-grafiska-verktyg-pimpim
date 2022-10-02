@@ -13,7 +13,7 @@ $paddingDesktop: 128px 60px;
 }
 
 @mixin afterSlash{
-  content: "";
+  content: '';
   margin: 0 8px;
   background: #3A3F42;
   display:inline-block;
@@ -71,7 +71,7 @@ body {
     line-height: 22px;
   }
 
-  @supports(font-variation-settings: "wght" 500){
+  @supports(font-variation-settings: 'wght' 500){
     #app {
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
@@ -299,7 +299,10 @@ body {
 
     // NEWS SECTION
     #section-news{
-      @include flexWrapCenter();
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(1fr, 480px));
+      justify-items: stretch;
+      justify-content: center;
       padding: $paddingMobile;
       gap:42px 48px;
 
@@ -308,7 +311,10 @@ body {
         flex-direction: column;
         text-align: center;
         row-gap: 13px;
-        width: 342px;
+        @media screen and(max-width:767px){
+          width: 342px;
+        }
+        
 
         p{
           font-weight: 700;
@@ -324,7 +330,10 @@ body {
         justify-content: space-between;
         background-color: $lighterBackground;
         padding: 16px 14px 0;
-        width: 342px;
+
+        @media screen and(max-width:767px){
+          width: 342px;
+        }
 
         .cardHeading{
           display: flex;
@@ -349,7 +358,7 @@ body {
         .link-button{
           place-self: center;
           position: relative;
-          bottom: -1.2rem;
+          bottom: -1rem;
         }
       }
     }
@@ -361,7 +370,7 @@ body {
       border-top: $greyBorder;
       border-bottom: $greyBorder;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(342px, 512px));
+      grid-template-columns: repeat(auto-fill, minmax(342px, 512px));
       justify-content: center;
       column-gap: 64px;
       row-gap: 5rem;
@@ -490,6 +499,7 @@ body {
       display: flex;
       flex-wrap:wrap;
       row-gap: 9px;
+      column-gap: 10px;
       justify-content:center;
       align-items: center;
 
@@ -502,16 +512,14 @@ body {
         span{
           font-weight: 700;
         }
-
-        &:last-child{
-          flex-basis: content;
-          padding: 0 3rem;
-        }
-
         @media  screen and (max-width: 767px) {
+          &:last-child{
+            padding: 0 3rem;
+          }
+
           &:not(:last-child):nth-child(even)::before{
             @include afterSlash();
-            margin: 0 8px;
+            margin-right:16px;
           }
         }
       }

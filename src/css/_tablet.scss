@@ -25,14 +25,16 @@ body{
     }
 
     #section-news{
+      padding: $paddingTablet;
+      grid-template-columns: repeat(2, minmax(342px, 420px));
       column-gap: 48px;
 
-      div:first-of-type{
-        width: 420px;
+      div:first-child{
+        max-width:420px;
+        justify-self: center;
       }
 
       article{
-        width: 420px;
         row-gap: 16px;
         padding: 20px 20px 0;
 
@@ -44,7 +46,7 @@ body{
       }
     }
       #section-info {
-        @media screen and(max-width:1023px) {
+        @media screen and(max-width:1024) {
           padding-inline: 200px;
         }
 
@@ -58,8 +60,10 @@ body{
     }
 
     footer{
-      padding: $paddingTablet;
-
+      @media screen and (max-width: 1024px) {
+        padding: $paddingTablet;
+      }
+  
       #footer-linkList{
         justify-content: center;
         align-self: center;
@@ -70,14 +74,19 @@ body{
           width:220px;
         }
       }
-      #footer-contact{
-        padding: 0 130px;
-
-        @media screen and (max-width: 1024px) {
-          li{
-            &:last-child::before{
-              @include afterSlash
+      @media screen and (max-width: 1024px) {
+        #footer-contact{
+          width: 640px;
+          column-gap: 10px;
+          padding: 0;
+            li{
+              &:not(:last-child):not(:nth-child(3))::after{
+                @include afterSlash();
+                margin-left: 12px;
             }
+          }
+          &:last-child{
+            padding: 0;
           }
         }
       }
