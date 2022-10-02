@@ -11,9 +11,6 @@ body{
       }
     }
     main{
-      section{
-        padding:128px 0;
-      }
       #section-intro{
         column-gap: 64px;
 
@@ -35,33 +32,34 @@ body{
         div:first-of-type, article{
           width: 480px;
         }
-       
       }
 
       #section-info{
-        column-gap: 64px;
-        justify-content: center;
-        padding-inline: 0;
+        column-gap: 50px;
+        padding-inline: 100px;
+        grid-template-columns: repeat(auto-fill, 340px);
 
         div{
           justify-content: space-between;
-          flex-grow: 0;
-          max-width: 349px;
+          width:340px;
+
         }
       }
 
       #section-statistics{
+        padding: $paddingDesktop;
         column-gap: 160px;
       }
     }
 
     footer{
+      padding: $paddingDesktop;
       #footer-linkList{
-        width:900px;
+        column-gap: 2rem;
       }
 
       #footer-contact {
-        width:max-content;
+        width:fit-content;
 
         li:not(:last-child)::after{
           @include afterSlash();

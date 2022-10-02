@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang='ts'>
   const emit = defineEmits(['show'])
 
   function acceptCookies(){
@@ -7,16 +7,16 @@
 </script>
 
 <template>
-  <div id="cookies">
+  <div id='cookies'>
     <b>Vi använder kakor</b>
     <p>Vi använder cookies, inlusive tredjeparts, på vår webbplats för att den ska fungera så bra som möjligt, förbättra och skräddarsy innehåll, rapportera om användningen av webbplatsen samt för riktad marknadsföring. </p>
-    <a href="#">Du kan läsa mer om hur vi använder cookies i vår cookie-policy.</a>
-    <button @click="acceptCookies">Godkänn alla kakor</button>
+    <a href='#'>Du kan läsa mer om hur vi använder cookies i vår cookie-policy.</a>
+    <button @click='acceptCookies'>Godkänn alla kakor</button>
     <button>Inställningar</button>
   </div>
 </template>
 
-<style lang="scss">
+<style lang='scss'>
   #cookies{
     background-color: #1A1D1E;
     border: 2px solid #3A3F42;

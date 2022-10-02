@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang='ts'>
   import Header from './components/Header.vue'
   import Intro from './components/Intro.vue'
   import Articles from './components/Articles.vue'
@@ -13,34 +13,34 @@
 
 
 <template>
-  <header id="header-app">
+  <header id='header-app'>
       <Header/>
   </header>
 
   <main>
-    <section id="section-intro">
+    <section id='section-intro'>
       <Intro />
-      <img src="./assets/hero.jpg" alt="city of stockholm" id="img-intro"/>
+      <img src='./assets/hero.jpg' alt='city of stockholm' id='img-intro'/>
     </section>
   
-    <section id="section-news">
+    <section id='section-news'>
       <Articles />
     </section>
 
-    <section id="section-info">
+    <section id='section-info'>
       <Info />
     </section>
 
-    <section id="section-statistics">
+    <section id='section-statistics'>
       <h2>Stokab i siffror</h2>
-      <Statistics numbers="2 556" object="Nya förbindelser"/>
-      <Statistics numbers="1,9 mn" object="Kilometer fiberoptik"/>
-      <Statistics numbers="23 200" object="Anslutningspunkter"/>
+      <Statistics numbers='2 556' object='Nya förbindelser'/>
+      <Statistics numbers='1,9 mn' object='Kilometer fiberoptik'/>
+      <Statistics numbers='23 200' object='Anslutningspunkter'/>
     </section>
   </main>
   <footer>
     <Footer />
   </footer>
 
-  <Cookies v-if=showCookies @show="(value) => showCookies = false" />
+  <Cookies v-if=showCookies @show='(value) => showCookies = false' />
 </template>

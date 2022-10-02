@@ -1,21 +1,14 @@
 body{
   #app{
     #header-app{
-      @media  screen and (max-width: 1024px) {
-        
-      }
-
       ul{
         align-items: center;
       }
     }
-    section{
-      padding: 96px 0;
-    }
     #section-intro{
+      padding: $paddingTablet;
       flex-wrap: nowrap;
       align-items: center;
-
 
       div{
         font-size: 1rem;
@@ -33,7 +26,7 @@ body{
 
     #section-news{
       column-gap: 48px;
-      
+
       div:first-of-type{
         width: 420px;
       }
@@ -50,27 +43,31 @@ body{
         }
       }
     }
+      #section-info {
+        @media screen and(max-width:1023px) {
+          padding-inline: 200px;
+        }
 
-    #section-info {
-      padding-inline: 256px;
-    }
+        div{
+          width: 512px;
+        }
+      }
 
     #section-statistics{
       column-gap: 130px;
     }
 
     footer{
-      #footer-linkList{
-        @media screen and (max-width: 1024px) {
-          width:800px;
-        }
-        
-        .footer-linkGroup{
-          width: 30%;
+      padding: $paddingTablet;
 
-          li{
-            width: 100%;
-          }
+      #footer-linkList{
+        justify-content: center;
+        align-self: center;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
+        column-gap: 5px;
+
+        .footer-linkGroup{
+          width:220px;
         }
       }
       #footer-contact{
