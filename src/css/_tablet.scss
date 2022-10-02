@@ -7,17 +7,19 @@ body{
     }
     #section-intro{
       padding: $paddingTablet;
+      padding-bottom: 0;
       flex-wrap: nowrap;
       align-items: center;
+      column-gap: 20px;
 
       div{
         font-size: 1rem;
-        padding: 40px 0;
-        width:389px;
+        width:auto;
       }
 
       #img-intro{
-        max-width: 53%;
+        width: 53%;
+        flex-grow: 2;
         height:fit-content;
         margin-top: 0;
         position: static;
@@ -26,7 +28,7 @@ body{
 
     #section-news{
       padding: $paddingTablet;
-      grid-template-columns: repeat(2, minmax(342px, 420px));
+      grid-template-columns: 1fr 1fr;
       column-gap: 48px;
 
       div:first-child{
@@ -45,34 +47,28 @@ body{
         }
       }
     }
-      #section-info {
-        @media screen and(max-width:1024) {
-          padding-inline: 200px;
-        }
+    #section-info {
+      padding: $paddingTablet;
 
-        div{
-          width: 512px;
-        }
+      div{
+        width: 512px;
       }
+    }
 
     #section-statistics{
-      column-gap: 130px;
+      padding: $paddingTablet;
+      margin-bottom: 64px;
+      column-gap: 32px;
     }
 
     footer{
-      @media screen and (max-width: 1024px) {
-        padding: $paddingTablet;
-      }
+      padding: $paddingTablet;
   
       #footer-linkList{
         justify-content: center;
         align-self: center;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
-        column-gap: 5px;
-
-        .footer-linkGroup{
-          width:220px;
-        }
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 32px;
       }
       @media screen and (max-width: 1024px) {
         #footer-contact{

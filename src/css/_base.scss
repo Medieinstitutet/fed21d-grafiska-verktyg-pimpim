@@ -259,9 +259,9 @@ body {
     // INTRO SECTION
     #section-intro{
       @include flexWrapCenter();
+      justify-content: space-between;
       padding: 62px 24px 0;
       row-gap: 54px;
-      column-gap: 59px;
 
       div{
         display: flex;
@@ -293,6 +293,7 @@ body {
       #img-intro{
         width:100vw;
         position: relative;
+        left: -24px;
       }
     }
 
@@ -311,7 +312,7 @@ body {
         text-align: center;
         row-gap: 13px;
         @media screen and(max-width:767px){
-          width: 342px;
+          //width: 342px;
         }
         
 
@@ -331,7 +332,7 @@ body {
         padding: 16px 14px 0;
 
         @media screen and(max-width:767px){
-          width: 342px;
+          //width: 342px;
         }
 
         .cardHeading{
@@ -390,7 +391,7 @@ body {
       @include flexWrapCenter();
       padding: $paddingMobile;
       row-gap: 54px;
-      column-gap: 180px;
+      
 
       h2{
         width: 100%;
@@ -405,6 +406,8 @@ body {
         align-items: center;
         row-gap: 14px;
         column-gap: 183px;
+        max-width: 256px;
+        min-width:1fr;
 
         h3{
           color: #ECEDEE;
@@ -447,8 +450,7 @@ body {
     #footer-linkList{
       display: grid;
       align-self: flex-start;
-      width: 100%;
-      grid-template-columns: repeat(auto-fill, 100%);
+      grid-template-columns: 1fr;
 
       .footer-linkGroup:last-of-type .footer-links{
         padding-bottom: 0;
@@ -459,9 +461,7 @@ body {
         font-size: 1.1rem;
         color: $almostWhite;
 
-        @media screen and (max-width: 767px){
-          width: 342px;
-        }
+        
 
 
         .footer-links{

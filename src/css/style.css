@@ -308,10 +308,11 @@ body #app #section-intro {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 62px 24px 0;
   row-gap: 54px;
-  -webkit-column-gap: 59px;
-          column-gap: 59px;
 }
 
 body #app #section-intro div {
@@ -349,6 +350,7 @@ body #app #section-intro div p:first-of-type {
 body #app #section-intro #img-intro {
   width: 100vw;
   position: relative;
+  left: -24px;
 }
 
 body #app #section-news {
@@ -381,12 +383,6 @@ body #app #section-news div:first-child {
   row-gap: 13px;
 }
 
-@media screen and (max-width: 767px) {
-  body #app #section-news div:first-child {
-    width: 342px;
-  }
-}
-
 body #app #section-news div:first-child p {
   font-weight: 700;
   padding: 0 2rem;
@@ -407,12 +403,6 @@ body #app #section-news article {
           justify-content: space-between;
   background-color: #1A1D1E;
   padding: 16px 14px 0;
-}
-
-@media screen and (max-width: 767px) {
-  body #app #section-news article {
-    width: 342px;
-  }
 }
 
 body #app #section-news article .cardHeading {
@@ -488,8 +478,6 @@ body #app #section-statistics {
           justify-content: center;
   padding: 48px 24px;
   row-gap: 54px;
-  -webkit-column-gap: 180px;
-          column-gap: 180px;
 }
 
 body #app #section-statistics h2 {
@@ -513,6 +501,8 @@ body #app #section-statistics .statsObj-wrapper {
   row-gap: 14px;
   -webkit-column-gap: 183px;
           column-gap: 183px;
+  max-width: 256px;
+  min-width: 1fr;
 }
 
 body #app #section-statistics .statsObj-wrapper h3 {
@@ -562,9 +552,8 @@ body footer #footer-linkList {
   display: -ms-grid;
   display: grid;
   align-self: flex-start;
-  width: 100%;
-  -ms-grid-columns: (100%)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 100%);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 
 body footer #footer-linkList .footer-linkGroup:last-of-type .footer-links {
@@ -575,12 +564,6 @@ body footer #footer-linkList .footer-linkGroup {
   font-weight: 600;
   font-size: 1.1rem;
   color: #ECEDEE;
-}
-
-@media screen and (max-width: 767px) {
-  body footer #footer-linkList .footer-linkGroup {
-    width: 342px;
-  }
 }
 
 body footer #footer-linkList .footer-linkGroup .footer-links {
@@ -663,7 +646,7 @@ body footer #footer-contact li span {
   src: url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   body #app #header-app #header-logo {
     -ms-grid-column: 2;
     grid-column: 2;
@@ -687,8 +670,8 @@ body footer #footer-contact li span {
   }
   body #app main #section-news {
     padding: 128px 60px;
-    -ms-grid-columns: (minmax(420px, 480px))[2];
-        grid-template-columns: repeat(2, minmax(420px, 480px));
+    -ms-grid-columns: 480px 480px;
+        grid-template-columns: 480px 480px;
   }
   body #app main #section-news div:first-child {
     padding: 0 4rem;
@@ -752,19 +735,24 @@ body footer #footer-contact li span {
   }
   body #app #section-intro {
     padding: 96px 32px;
+    padding-bottom: 0;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
   }
   body #app #section-intro div {
     font-size: 1rem;
-    padding: 40px 0;
-    width: 389px;
+    width: auto;
   }
   body #app #section-intro #img-intro {
-    max-width: 53%;
+    width: 53%;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -773,8 +761,8 @@ body footer #footer-contact li span {
   }
   body #app #section-news {
     padding: 96px 32px;
-    -ms-grid-columns: (minmax(342px, 420px))[2];
-        grid-template-columns: repeat(2, minmax(342px, 420px));
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     -webkit-column-gap: 48px;
             column-gap: 48px;
   }
@@ -790,31 +778,21 @@ body footer #footer-contact li span {
   body #app #section-news article .cardHeading h3 {
     font-size: 1.2rem;
   }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024) {
   body #app #section-info {
-    padding-inline: 200px;
+    padding: 96px 32px;
   }
-}
-
-@media only screen and (min-width: 768px) {
   body #app #section-info div {
     width: 512px;
   }
   body #app #section-statistics {
-    -webkit-column-gap: 130px;
-            column-gap: 130px;
+    padding: 96px 32px;
+    margin-bottom: 64px;
+    -webkit-column-gap: 32px;
+            column-gap: 32px;
   }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
   body #app footer {
     padding: 96px 32px;
   }
-}
-
-@media only screen and (min-width: 768px) {
   body #app footer #footer-linkList {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -822,13 +800,10 @@ body footer #footer-contact li span {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    -ms-grid-columns: (minmax(240px, 280px))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
-    -webkit-column-gap: 5px;
-            column-gap: 5px;
-  }
-  body #app footer #footer-linkList .footer-linkGroup {
-    width: 220px;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -webkit-column-gap: 32px;
+            column-gap: 32px;
   }
 }
 

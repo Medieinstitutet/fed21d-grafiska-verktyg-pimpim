@@ -25,7 +25,7 @@ body{
 
       #section-news{
         padding: $paddingDesktop;
-        grid-template-columns: repeat(2, minmax(420px, 480px));
+        grid-template-columns: 480px 480px;
 
         div:first-child{
           padding: 0 4rem;
