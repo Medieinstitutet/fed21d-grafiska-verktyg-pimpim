@@ -1,0 +1,78 @@
+
+body{
+  #app{
+    #header-app{
+      #header-logo{
+        grid-column: 2;
+      }
+
+      nav{
+        grid-column: 3/span 9;
+      }
+    }
+    main{
+      #section-intro{
+        column-gap: 64px;
+
+        div{
+          width:389px;
+        }
+        #img-intro{
+          width:786px;
+        }
+      }
+
+      #section-news{
+        justify-content: center;
+
+        div:first-child{
+          padding: 0 4rem;
+        }
+
+        div:first-of-type, article{
+          width: 480px;
+        }
+      }
+
+      #section-info{
+        column-gap: 50px;
+        padding-inline: 100px;
+        grid-template-columns: repeat(auto-fill, 340px);
+
+        div{
+          justify-content: space-between;
+          width:340px;
+
+        }
+      }
+
+      #section-statistics{
+        padding: $paddingDesktop;
+        column-gap: 160px;
+      }
+    }
+
+    footer{
+      padding: $paddingDesktop;
+      #footer-linkList{
+        column-gap: 2rem;
+      }
+
+      #footer-contact {
+        width:fit-content;
+
+        li:not(:last-child)::after{
+          @include afterSlash();
+        }
+
+        li:last-child{
+          padding: 0;
+        }
+      }
+    }
+
+    #cookies{
+      max-width: 33%;
+    }
+  }
+}

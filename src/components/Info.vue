@@ -1,6 +1,5 @@
-<script setup lang="ts">
-  import Article from "./Article.vue";
-import Button from "./Button.vue";
+<script setup lang='ts'>
+  import Button from './Button.vue';
 </script>
 
 <template>
@@ -26,7 +25,3 @@ import Button from "./Button.vue";
   </div>
 
 </template>
-
-<style lang="scss">
-  
-</style>

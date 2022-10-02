@@ -5,7 +5,11 @@
   src: url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 }
 
-@media screen 
-  and (min-width: 768px){
+@media only screen and (min-width: 1025px){
+  @import './_desktop';
+}
+
+@media only screen and (min-width: 768px){
   @import './_tablet';
 }
+
