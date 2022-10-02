@@ -25,6 +25,14 @@
       width: 20px;
       height: 20px;
     }
+
+    &:hover{
+      background-color: #1A1D1E;
+    }
+
+    &:active{
+      background-color: #202425;
+    }
   }
 </style>
   

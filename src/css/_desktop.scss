@@ -11,15 +11,15 @@ body{
     }
     main{
       #section-intro{
-        padding:$paddingDesktop;
-        padding-bottom: 0;
-        column-gap: 64px;
-
         div{
+          grid-column: 2/ span 3;
           width:389px;
+          column-gap: 20px;
         }
+
         #img-intro{
-          width:786px;
+          grid-column: 5/span 7;
+          max-width:786px;
         }
       }
 
@@ -35,8 +35,8 @@ body{
       #section-info{
         column-gap: 50px;
         padding:$paddingDesktop;
-        grid-template-columns: repeat(auto-fill, 340px);
-        grid-auto-columns:340px;
+        padding-inline: 320px;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
 
         div{
           justify-content: space-between;
@@ -69,10 +69,6 @@ body{
           padding: 0;
         }
       }
-    }
-
-    #cookies{
-      max-width: 33%;
     }
   }
 }

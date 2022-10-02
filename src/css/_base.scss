@@ -6,6 +6,23 @@ $paddingMobile: 48px 24px;
 $paddingTablet: 96px 32px;
 $paddingDesktop: 128px 60px;
 
+@mixin buttonPrimary{
+  background-color: $yellow;
+  color: #151718;
+
+  &:hover{
+    background-color: #FFEF5C;
+  }
+
+  &:active{
+    background-color: #FFEF5C;
+  }
+
+  &:disabled{
+    background-color: #787F85;
+  }
+}
+
 @mixin flexWrapCenter{
   display: flex;
   flex-wrap: wrap;
@@ -41,6 +58,7 @@ body {
     cursor: pointer;
     border:none;
     background:transparent;
+    transition: all 0.3s;
   }
 
   ul{
@@ -61,6 +79,11 @@ body {
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 700;
+    transition: all 0.4s;
+
+    &:not(.link-button):hover{
+      text-decoration: underline 1px solid;
+    }
   }
 
   p{
@@ -235,7 +258,7 @@ body {
 
           input{
             background-color: $lighterBackground;
-            color: #697177;
+            color: $almostWhite;
             border:none;
             font-size:1rem;
             border-radius: 99px;
@@ -259,7 +282,7 @@ body {
     // INTRO SECTION
     #section-intro{
       @include flexWrapCenter();
-      justify-content: space-between;
+      justify-content: center;
       padding: 62px 24px 0;
       row-gap: 54px;
 
@@ -268,7 +291,6 @@ body {
         flex-direction: column;
         row-gap: 16px;
         min-width:342px;
-        max-width: 390px;
 
         h1{
           font-size: 1.9rem;
@@ -288,12 +310,14 @@ body {
             font-size: 14px;
           }
         }
+
+        .link-button{
+          @include buttonPrimary();
+        }
       }
 
       #img-intro{
         width:100vw;
-        position: relative;
-        left: -24px;
       }
     }
 
@@ -311,10 +335,6 @@ body {
         flex-direction: column;
         text-align: center;
         row-gap: 13px;
-        @media screen and(max-width:767px){
-          //width: 342px;
-        }
-        
 
         p{
           font-weight: 700;
@@ -330,10 +350,6 @@ body {
         justify-content: space-between;
         background-color: $lighterBackground;
         padding: 16px 14px 0;
-
-        @media screen and(max-width:767px){
-          //width: 342px;
-        }
 
         .cardHeading{
           display: flex;
@@ -370,8 +386,9 @@ body {
       border-top: $greyBorder;
       border-bottom: $greyBorder;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(342px, 512px));
+      grid-template-columns: repeat(auto-fill, 342px);
       justify-content: center;
+      justify-items: center;
       gap: 64px;
 
       div{
@@ -391,7 +408,7 @@ body {
       @include flexWrapCenter();
       padding: $paddingMobile;
       row-gap: 54px;
-      
+
 
       h2{
         width: 100%;
@@ -461,9 +478,6 @@ body {
         font-size: 1.1rem;
         color: $almostWhite;
 
-        
-
-
         .footer-links{
           padding: 1rem 0 2rem;
 
@@ -520,6 +534,66 @@ body {
             @include afterSlash();
             margin-right:14px;
           }
+        }
+      }
+    }
+  }
+
+  #cookies{
+    background-color: $lighterBackground;
+    border: $greyBorder;
+    border-radius: 16px;
+    width: 98.5%;
+    position: fixed;
+    bottom:2px;
+    margin-left: 3.5px;
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    justify-content: space-evenly;
+
+    b{
+      font-size: 1.1rem;
+      width:100%;
+    }
+
+    a{
+      color: #3399FF;
+      text-decoration: underline #214B74 2px;
+      font-weight: 500;
+
+      &:hover{
+        color: #214B74;
+      }
+    }
+
+    button{
+      border-radius: 99px;
+      padding: 10px 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+
+      &:first-of-type{
+        @include buttonPrimary();
+      }
+
+      &:last-of-type{
+        color: $yellow;
+        border: $greyBorder;
+        background-color: #151718;
+
+        &:hover{
+          background-color: #1A1D1E;
+        }
+
+        &:active{
+          background-color: #202425;
+        }
+
+        &:disabled{
+          background-color: #2B2F31;
+          color: #3A3F42;
         }
       }
     }
