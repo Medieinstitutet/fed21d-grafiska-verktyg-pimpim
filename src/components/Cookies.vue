@@ -36,15 +36,9 @@
       width:100%;
     }
 
-    p{
-      font-size: 0.9rem;
-      line-height: 22px;
-    }
-
     a{
       color: #3399FF;
       text-decoration: underline #214B74 2px;
-      font-size: 0.9rem;
       font-weight: 500;
     }
 

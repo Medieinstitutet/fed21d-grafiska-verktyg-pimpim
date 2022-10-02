@@ -76,7 +76,7 @@ body #app #header-app {
           column-gap: 16px;
   -ms-flex-line-pack: stretch;
       align-content: stretch;
-  padding: 16px 32px;
+  padding: 16px 32px 0;
 }
 
 body #app #header-app #header-logo {
@@ -208,7 +208,7 @@ body #app #header-app #header-logo {
     width: 100%;
   }
   body #app #header-app nav #nav-secondary li:not(:last-child)::after {
-    content: "";
+    content: '';
     margin: 0 8px;
     background: #3A3F42;
     display: inline-block;
@@ -308,10 +308,11 @@ body #app #section-intro {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 48px 24px;
-  row-gap: 48px;
-  -webkit-column-gap: 59px;
-          column-gap: 59px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 62px 24px 0;
+  row-gap: 54px;
 }
 
 body #app #section-intro div {
@@ -348,20 +349,20 @@ body #app #section-intro div p:first-of-type {
 
 body #app #section-intro #img-intro {
   width: 100vw;
-  margin-top: 40px;
   position: relative;
+  left: -24px;
 }
 
 body #app #section-news {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(1fr, 480px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(1fr, 480px));
+  justify-items: stretch;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 48px 24px;
+  padding: 64px 24px;
   gap: 42px 48px;
 }
 
@@ -380,7 +381,6 @@ body #app #section-news div:first-child {
           flex-direction: column;
   text-align: center;
   row-gap: 13px;
-  width: 342px;
 }
 
 body #app #section-news div:first-child p {
@@ -403,7 +403,6 @@ body #app #section-news article {
           justify-content: space-between;
   background-color: #1A1D1E;
   padding: 16px 14px 0;
-  width: 342px;
 }
 
 body #app #section-news article .cardHeading {
@@ -434,7 +433,7 @@ body #app #section-news article p:not(.date) {
 body #app #section-news article .link-button {
   place-self: center;
   position: relative;
-  bottom: -1.2rem;
+  bottom: -1rem;
 }
 
 body #app #section-info {
@@ -444,14 +443,12 @@ body #app #section-info {
   border-bottom: 1px solid #4C5155;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(342px, 512px))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(342px, 512px));
+  -ms-grid-columns: (minmax(342px, 512px))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(342px, 512px));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-column-gap: 64px;
-          column-gap: 64px;
-  row-gap: 5rem;
+  gap: 64px;
 }
 
 body #app #section-info div {
@@ -480,9 +477,7 @@ body #app #section-statistics {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 48px 24px;
-  row-gap: 4rem;
-  -webkit-column-gap: 180px;
-          column-gap: 180px;
+  row-gap: 54px;
 }
 
 body #app #section-statistics h2 {
@@ -506,6 +501,8 @@ body #app #section-statistics .statsObj-wrapper {
   row-gap: 14px;
   -webkit-column-gap: 183px;
           column-gap: 183px;
+  max-width: 256px;
+  min-width: 1fr;
 }
 
 body #app #section-statistics .statsObj-wrapper h3 {
@@ -535,6 +532,7 @@ body #app #section-statistics .statsObj-wrapper .statsObj-nmbr p {
 
 body footer {
   padding: 48px 24px;
+  padding-top: 64px;
   background-color: #1A1D1E;
   border-top: 1px solid #4C5155;
   display: -webkit-box;
@@ -554,9 +552,8 @@ body footer #footer-linkList {
   display: -ms-grid;
   display: grid;
   align-self: flex-start;
-  width: 100%;
-  -ms-grid-columns: (100%)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 100%);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 
 body footer #footer-linkList .footer-linkGroup:last-of-type .footer-links {
@@ -567,12 +564,6 @@ body footer #footer-linkList .footer-linkGroup {
   font-weight: 600;
   font-size: 1.1rem;
   color: #ECEDEE;
-}
-
-@media screen and (max-width: 767px) {
-  body footer #footer-linkList .footer-linkGroup {
-    width: 342px;
-  }
 }
 
 body footer #footer-linkList .footer-linkGroup .footer-links {
@@ -603,19 +594,19 @@ body footer div #footer-logo {
 }
 
 body footer #footer-contact {
-  padding: 0 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   row-gap: 9px;
+  -webkit-column-gap: 6px;
+          column-gap: 6px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
+  width: 94vw;
 }
 
 body footer #footer-contact li {
@@ -633,15 +624,12 @@ body footer #footer-contact li span {
   font-weight: 700;
 }
 
-body footer #footer-contact li:last-child {
-  -ms-flex-preferred-size: content;
-      flex-basis: content;
-  padding: 0 3rem;
-}
-
 @media screen and (max-width: 767px) {
+  body footer #footer-contact li:last-child {
+    padding: 0 3rem;
+  }
   body footer #footer-contact li:not(:last-child):nth-child(even)::before {
-    content: "";
+    content: '';
     margin: 0 8px;
     background: #3A3F42;
     display: inline-block;
@@ -649,12 +637,12 @@ body footer #footer-contact li:last-child {
     height: 20px;
     rotate: 22deg;
     vertical-align: middle;
-    margin: 0 8px;
+    margin-right: 14px;
   }
 }
 
 @font-face {
-  font-family: "Plus Jakarta Sans";
+  font-family: 'Plus Jakarta Sans';
   src: url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
 }
 
@@ -669,6 +657,8 @@ body footer #footer-contact li:last-child {
     grid-column: 3/span 9;
   }
   body #app main #section-intro {
+    padding: 128px 60px;
+    padding-bottom: 0;
     -webkit-column-gap: 64px;
             column-gap: 64px;
   }
@@ -679,22 +669,20 @@ body footer #footer-contact li:last-child {
     width: 786px;
   }
   body #app main #section-news {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    padding: 128px 60px;
+    -ms-grid-columns: 480px 480px;
+        grid-template-columns: 480px 480px;
   }
   body #app main #section-news div:first-child {
     padding: 0 4rem;
   }
-  body #app main #section-news div:first-of-type, body #app main #section-news article {
-    width: 480px;
-  }
   body #app main #section-info {
     -webkit-column-gap: 50px;
             column-gap: 50px;
-    padding-inline: 100px;
+    padding: 128px 60px;
     -ms-grid-columns: (340px)[auto-fill];
         grid-template-columns: repeat(auto-fill, 340px);
+    grid-auto-columns: 340px;
   }
   body #app main #section-info div {
     -webkit-box-pack: justify;
@@ -708,7 +696,7 @@ body footer #footer-contact li:last-child {
             column-gap: 160px;
   }
   body #app footer {
-    padding: 128px 60px;
+    padding: 64px 0 48px;
   }
   body #app footer #footer-linkList {
     -webkit-column-gap: 2rem;
@@ -718,9 +706,10 @@ body footer #footer-contact li:last-child {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    padding: 0;
   }
   body #app footer #footer-contact li:not(:last-child)::after {
-    content: "";
+    content: '';
     margin: 0 8px;
     background: #3A3F42;
     display: inline-block;
@@ -728,6 +717,7 @@ body footer #footer-contact li:last-child {
     height: 20px;
     rotate: 22deg;
     vertical-align: middle;
+    margin-left: 16px;
   }
   body #app footer #footer-contact li:last-child {
     padding: 0;
@@ -745,19 +735,24 @@ body footer #footer-contact li:last-child {
   }
   body #app #section-intro {
     padding: 96px 32px;
+    padding-bottom: 0;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
   }
   body #app #section-intro div {
     font-size: 1rem;
-    padding: 40px 0;
-    width: 389px;
+    width: auto;
   }
   body #app #section-intro #img-intro {
-    max-width: 53%;
+    width: 53%;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -765,35 +760,35 @@ body footer #footer-contact li:last-child {
     position: static;
   }
   body #app #section-news {
+    padding: 96px 32px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     -webkit-column-gap: 48px;
             column-gap: 48px;
   }
-  body #app #section-news div:first-of-type {
-    width: 420px;
+  body #app #section-news div:first-child {
+    max-width: 420px;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   body #app #section-news article {
-    width: 420px;
     row-gap: 16px;
     padding: 20px 20px 0;
   }
   body #app #section-news article .cardHeading h3 {
     font-size: 1.2rem;
   }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
   body #app #section-info {
-    padding-inline: 200px;
+    padding: 96px 32px;
   }
-}
-
-@media only screen and (min-width: 768px) {
   body #app #section-info div {
     width: 512px;
   }
   body #app #section-statistics {
-    -webkit-column-gap: 130px;
-            column-gap: 130px;
+    padding: 96px 32px;
+    margin-bottom: 64px;
+    -webkit-column-gap: 32px;
+            column-gap: 32px;
   }
   body #app footer {
     padding: 96px 32px;
@@ -805,22 +800,22 @@ body footer #footer-contact li:last-child {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    -ms-grid-columns: (minmax(240px, 280px))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
-    -webkit-column-gap: 5px;
-            column-gap: 5px;
-  }
-  body #app footer #footer-linkList .footer-linkGroup {
-    width: 220px;
-  }
-  body #app footer #footer-contact {
-    padding: 0 130px;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -webkit-column-gap: 32px;
+            column-gap: 32px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  body #app footer #footer-contact li:last-child::before {
-    content: "";
+  body #app footer #footer-contact {
+    width: 640px;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    padding: 0;
+  }
+  body #app footer #footer-contact li:not(:last-child):not(:nth-child(3))::after {
+    content: '';
     margin: 0 8px;
     background: #3A3F42;
     display: inline-block;
@@ -828,6 +823,10 @@ body footer #footer-contact li:last-child {
     height: 20px;
     rotate: 22deg;
     vertical-align: middle;
+    margin-left: 12px;
+  }
+  body #app footer #footer-contact:last-child {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

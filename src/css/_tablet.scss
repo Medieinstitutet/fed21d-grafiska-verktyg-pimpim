@@ -7,17 +7,19 @@ body{
     }
     #section-intro{
       padding: $paddingTablet;
+      padding-bottom: 0;
       flex-wrap: nowrap;
       align-items: center;
+      column-gap: 20px;
 
       div{
         font-size: 1rem;
-        padding: 40px 0;
-        width:389px;
+        width:auto;
       }
 
       #img-intro{
-        max-width: 53%;
+        width: 53%;
+        flex-grow: 2;
         height:fit-content;
         margin-top: 0;
         position: static;
@@ -25,14 +27,16 @@ body{
     }
 
     #section-news{
+      padding: $paddingTablet;
+      grid-template-columns: 1fr 1fr;
       column-gap: 48px;
 
-      div:first-of-type{
-        width: 420px;
+      div:first-child{
+        max-width:420px;
+        justify-self: center;
       }
 
       article{
-        width: 420px;
         row-gap: 16px;
         padding: 20px 20px 0;
 
@@ -43,41 +47,42 @@ body{
         }
       }
     }
-      #section-info {
-        @media screen and(max-width:1023px) {
-          padding-inline: 200px;
-        }
+    #section-info {
+      padding: $paddingTablet;
 
-        div{
-          width: 512px;
-        }
+      div{
+        width: 512px;
       }
+    }
 
     #section-statistics{
-      column-gap: 130px;
+      padding: $paddingTablet;
+      margin-bottom: 64px;
+      column-gap: 32px;
     }
 
     footer{
       padding: $paddingTablet;
-
+  
       #footer-linkList{
         justify-content: center;
         align-self: center;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
-        column-gap: 5px;
-
-        .footer-linkGroup{
-          width:220px;
-        }
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 32px;
       }
-      #footer-contact{
-        padding: 0 130px;
-
-        @media screen and (max-width: 1024px) {
-          li{
-            &:last-child::before{
-              @include afterSlash
+      @media screen and (max-width: 1024px) {
+        #footer-contact{
+          width: 640px;
+          column-gap: 10px;
+          padding: 0;
+            li{
+              &:not(:last-child):not(:nth-child(3))::after{
+                @include afterSlash();
+                margin-left: 12px;
             }
+          }
+          &:last-child{
+            padding: 0;
           }
         }
       }
