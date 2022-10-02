@@ -783,7 +783,6 @@ body #cookies button:last-of-type:disabled {
     -webkit-column-gap: 50px;
             column-gap: 50px;
     padding: 128px 60px;
-    padding-inline: 320px;
     -ms-grid-columns: (minmax(340px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   }

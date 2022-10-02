@@ -35,7 +35,6 @@ body{
       #section-info{
         column-gap: 50px;
         padding:$paddingDesktop;
-        padding-inline: 320px;
         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
 
         div{
