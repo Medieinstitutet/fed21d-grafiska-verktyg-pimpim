@@ -1,4 +1,3 @@
-
 body{
   #app{
     #header-app{
@@ -13,6 +12,7 @@ body{
     main{
       #section-intro{
         padding:$paddingDesktop;
+        padding-bottom: 0;
         column-gap: 64px;
 
         div{
