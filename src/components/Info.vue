@@ -23,5 +23,4 @@
     <p>När vi pratar säkerhet fokuserar vi på fyra områden: nätstrukturen, korskopplingarna, noderna och produktutbudet.</p>
     <Button>Läs mer om våra säkerhetsområden</Button>
   </div>
-
 </template>
